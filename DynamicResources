@@ -244,12 +244,23 @@
             </bodyVariableClass>
             <bodyVariableClass id="BodyVariableClass_3">
                 <variableClass name="HarvestedGoo" id="VariableClass_3"
-                    writeable="true" external="true" partOfName="false"
-                    configValue="true" analysisValue="true">
+                    hasNextValue="true" writeable="true" external="true"
+                    partOfName="false" configValue="true" analysisValue="true">
                     <doubleType/>
                     <defaultValue>
                         <double value="0.0"/>
                     </defaultValue>
+                    <nextValue>
+                        <call functionName="-">
+                            <call functionName="GetVariable">
+                                <variableID external="false"
+                                    writeable="false" id="BodyVariableClass_3"/>
+                            </call>
+                            <call functionName="GetVariable">
+                                <variableID id="BodyVariableClass_11"/>
+                            </call>
+                        </call>
+                    </nextValue>
                 </variableClass>
             </bodyVariableClass>
             <bodyVariableClass id="BodyVariableClass_4">
@@ -324,6 +335,16 @@
                     </defaultValue>
                 </variableClass>
             </bodyVariableClass>
+            <bodyVariableClass id="BodyVariableClass_11">
+                <variableClass name="upkeep" id="VariableClass_11"
+                    writeable="false" external="false"
+                    partOfName="false" configValue="true" analysisValue="true">
+                    <doubleType/>
+                    <defaultValue>
+                        <double value="1.0"/>
+                    </defaultValue>
+                </variableClass>
+            </bodyVariableClass>
         </bodyClass>
         <interactionelements/>
         <reasoning>
@@ -332,7 +353,7 @@
                     id="EntryActivityGraphLeaf_0" x="143" y="202"
                     width="15" height="15"/>
                 <exitActivity name="Exit Activity"
-                    id="ExitActivityGraphLeaf_0" x="70" y="190"
+                    id="ExitActivityGraphLeaf_0" x="121" y="103"
                     width="15" height="15"/>
                 <emergencyActivity name="Emergency Activity"
                     id="EmergencyActivityGraphLeaf_0" x="283" y="68"
@@ -365,7 +386,7 @@
                                     <call functionName="-">
                                     <double value="1.0"/>
                                     <call functionName="GetVariableFrom">
-                                    <variableID id="BodyVariableClass_11"/>
+                                    <variableID id="BodyVariableClass_12"/>
                                     <call functionName="GetVariable">
                                     <variableID
                                     external="false"
@@ -409,14 +430,14 @@
                     <actionRule>
                         <action>
                             <call functionName="IncrementVarOf">
-                                <variableID id="BodyVariableClass_12"/>
+                                <variableID id="BodyVariableClass_13"/>
                                 <call functionName="*">
                                     <call functionName="GetVariable">
                                     <variableID external="false"
                                     writeable="false" id="BodyVariableClass_9"/>
                                     </call>
                                     <call functionName="GetVariableFrom">
-                                    <variableID id="BodyVariableClass_11"/>
+                                    <variableID id="BodyVariableClass_12"/>
                                     <call functionName="GetVariable">
                                     <variableID external="false"
                                     writeable="false" id="BodyVariableClass_8">
@@ -708,6 +729,17 @@
                 </chainRule>
                 <otherwiseChainRule
                     toActivityID="ActionActivityGraphLeaf_2" fromDecisionActivityID="ActionActivityGraphLeaf_3"/>
+                <emergencyRule toActivityID="ExitActivityGraphLeaf_0">
+                    <precondition>
+                        <call functionName="&lt;">
+                            <call functionName="GetVariable">
+                                <variableID external="false"
+                                    writeable="false" id="BodyVariableClass_3"/>
+                            </call>
+                            <double value="0.0"/>
+                        </call>
+                    </precondition>
+                </emergencyRule>
             </composedActivity>
         </reasoning>
     </agentClass>
@@ -729,8 +761,8 @@
             </features>
         </features>
         <bodyClass>
-            <bodyVariableClass id="BodyVariableClass_11">
-                <variableClass name="Tax" id="VariableClass_11"
+            <bodyVariableClass id="BodyVariableClass_12">
+                <variableClass name="Tax" id="VariableClass_12"
                     writeable="false" external="true" partOfName="false"
                     configValue="true" analysisValue="true">
                     <doubleType/>
@@ -739,8 +771,8 @@
                     </defaultValue>
                 </variableClass>
             </bodyVariableClass>
-            <bodyVariableClass id="BodyVariableClass_12">
-                <variableClass name="Goo" id="VariableClass_12"
+            <bodyVariableClass id="BodyVariableClass_13">
+                <variableClass name="Goo" id="VariableClass_13"
                     writeable="true" external="true" partOfName="false"
                     configValue="true" analysisValue="true">
                     <doubleType/>
@@ -749,9 +781,9 @@
                     </defaultValue>
                 </variableClass>
             </bodyVariableClass>
-            <bodyVariableClass id="BodyVariableClass_13">
+            <bodyVariableClass id="BodyVariableClass_14">
                 <variableClass name="ExpansionCost"
-                    id="VariableClass_13" writeable="false"
+                    id="VariableClass_14" writeable="false"
                     external="true" partOfName="false"
                     configValue="true" analysisValue="true">
                     <doubleType/>
@@ -760,9 +792,9 @@
                     </defaultValue>
                 </variableClass>
             </bodyVariableClass>
-            <bodyVariableClass id="BodyVariableClass_14">
+            <bodyVariableClass id="BodyVariableClass_15">
                 <variableClass name="StartingBudget"
-                    id="VariableClass_14" writeable="true"
+                    id="VariableClass_15" writeable="true"
                     external="false" partOfName="false"
                     configValue="true" analysisValue="true">
                     <doubleType/>
@@ -808,6 +840,7 @@
                                     <bodyVariableInstance bodyVariableClassID="BodyVariableClass_8"/>
                                     <bodyVariableInstance bodyVariableClassID="BodyVariableClass_9"/>
                                     <bodyVariableInstance bodyVariableClassID="BodyVariableClass_10"/>
+                                    <bodyVariableInstance bodyVariableClassID="BodyVariableClass_11"/>
                                     <featureInstance
                                     featureObjectClassID="SpatialInfoObjectFeatureClass_1"
                                     xsi:type="XMLSpatialInfoFeatureInstance" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -840,7 +873,7 @@
                                     <variableID id="BodyVariableClass_3"/>
                                     <call functionName="GetVariable">
                                     <variableID
-                                    writeable="false" id="BodyVariableClass_14"/>
+                                    writeable="false" id="BodyVariableClass_15"/>
                                     </call>
                                     <parameterID id="FunctionArgument_8"/>
                                     </call>
@@ -882,15 +915,15 @@
                     <actionRule>
                         <action>
                             <call functionName="IncrementVar">
-                                <variableID external="false" id="BodyVariableClass_12"/>
+                                <variableID external="false" id="BodyVariableClass_13"/>
                                 <call functionName="-Unary">
                                     <call functionName="+">
                                     <call functionName="GetVariable">
-                                    <variableID external="false" id="BodyVariableClass_13"/>
+                                    <variableID external="false" id="BodyVariableClass_14"/>
                                     </call>
                                     <call functionName="GetVariable">
                                     <variableID
-                                    writeable="false" id="BodyVariableClass_14"/>
+                                    writeable="false" id="BodyVariableClass_15"/>
                                     </call>
                                     </call>
                                 </call>
@@ -938,15 +971,15 @@
                             <call functionName="&lt;">
                                 <call functionName="+">
                                     <call functionName="GetVariable">
-                                    <variableID external="false" id="BodyVariableClass_13"/>
+                                    <variableID external="false" id="BodyVariableClass_14"/>
                                     </call>
                                     <call functionName="GetVariable">
-                                    <variableID writeable="false" id="BodyVariableClass_14"/>
+                                    <variableID writeable="false" id="BodyVariableClass_15"/>
                                     </call>
                                 </call>
                                 <call functionName="GetVariable">
                                     <variableID external="false"
-                                    writeable="false" id="BodyVariableClass_12"/>
+                                    writeable="false" id="BodyVariableClass_13"/>
                                 </call>
                             </call>
                         </call>
@@ -969,8 +1002,8 @@
                 xsi:type="XMLSpatialMapFeature" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
         </features>
         <bodyClass>
-            <bodyVariableClass id="BodyVariableClass_15">
-                <variableClass name="NMoons" id="VariableClass_15"
+            <bodyVariableClass id="BodyVariableClass_16">
+                <variableClass name="NMoons" id="VariableClass_16"
                     writeable="false" external="false"
                     partOfName="false" configValue="true" analysisValue="true">
                     <doubleType/>
@@ -1081,7 +1114,7 @@
                                     </call>
                                 </call>
                                 <call functionName="GetVariable">
-                                    <variableID id="BodyVariableClass_15"/>
+                                    <variableID id="BodyVariableClass_16"/>
                                 </call>
                             </call>
                         </action>
@@ -1106,7 +1139,7 @@
                                 </call>
                             </call>
                             <call functionName="GetVariable">
-                                <variableID id="BodyVariableClass_15"/>
+                                <variableID id="BodyVariableClass_16"/>
                             </call>
                         </call>
                     </precondition>
@@ -1122,7 +1155,7 @@
     </worldClass>
     <situation name="2 MIners" id="Situation_0">
         <worldInstance id="ActivityWorldInstance_0" objectClassID="ActivityWorldClass_0">
-            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_15"/>
+            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_16"/>
             <featureInstance
                 featureObjectClassID="SpatialMapFeatureClass_0"
                 torus="false" drawGrid="true" discrete="false"
@@ -1144,6 +1177,7 @@
             <bodyVariableInstance bodyVariableClassID="BodyVariableClass_8"/>
             <bodyVariableInstance bodyVariableClassID="BodyVariableClass_9"/>
             <bodyVariableInstance bodyVariableClassID="BodyVariableClass_10"/>
+            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_11"/>
             <featureInstance
                 featureObjectClassID="SpatialInfoObjectFeatureClass_1"
                 xsi:type="XMLSpatialInfoFeatureInstance" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -1168,6 +1202,7 @@
             <bodyVariableInstance bodyVariableClassID="BodyVariableClass_8"/>
             <bodyVariableInstance bodyVariableClassID="BodyVariableClass_9"/>
             <bodyVariableInstance bodyVariableClassID="BodyVariableClass_10"/>
+            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_11"/>
             <featureInstance
                 featureObjectClassID="SpatialInfoObjectFeatureClass_1"
                 xsi:type="XMLSpatialInfoFeatureInstance" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -1185,7 +1220,7 @@
     </situation>
     <situation name="2 Alliances" id="Situation_1">
         <worldInstance id="ActivityWorldInstance_1" objectClassID="ActivityWorldClass_0">
-            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_15"/>
+            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_16"/>
             <featureInstance
                 featureObjectClassID="SpatialMapFeatureClass_0"
                 torus="false" drawGrid="true" discrete="false"
@@ -1198,10 +1233,10 @@
             </featureInstance>
         </worldInstance>
         <objectInstance name="A1" id="ActivityAgentInstance_3" objectClassID="ActivityAgentClass_1">
-            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_11"/>
             <bodyVariableInstance bodyVariableClassID="BodyVariableClass_12"/>
             <bodyVariableInstance bodyVariableClassID="BodyVariableClass_13"/>
             <bodyVariableInstance bodyVariableClassID="BodyVariableClass_14"/>
+            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_15"/>
             <featureInstance
                 featureObjectClassID="SpatialInfoObjectFeatureClass_2"
                 xsi:type="XMLSpatialInfoFeatureInstance" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -1217,10 +1252,10 @@
             </featureInstance>
         </objectInstance>
         <objectInstance name="A2" id="ActivityAgentInstance_4" objectClassID="ActivityAgentClass_1">
-            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_11"/>
             <bodyVariableInstance bodyVariableClassID="BodyVariableClass_12"/>
             <bodyVariableInstance bodyVariableClassID="BodyVariableClass_13"/>
             <bodyVariableInstance bodyVariableClassID="BodyVariableClass_14"/>
+            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_15"/>
             <featureInstance
                 featureObjectClassID="SpatialInfoObjectFeatureClass_2"
                 xsi:type="XMLSpatialInfoFeatureInstance" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
