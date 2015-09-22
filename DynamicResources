@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<XMLSeSAmModel lastRunExperiment="Situation_1" version="0.2"
+<XMLSeSAmModel lastRunExperiment="Simulation_0" version="0.2"
     build="2536" globalAssert="true" compileDebugFunction="true"
     runDebugFunction="true" optimize="true" inline="true"
     closures="false" xmlns="http://www.simsesam.de/schemas/model">
@@ -341,7 +341,10 @@
                     partOfName="false" configValue="true" analysisValue="true">
                     <doubleType/>
                     <defaultValue>
-                        <double value="1.0"/>
+                        <call functionName="*">
+                            <double value="0.0"/>
+                            <double value="0.0"/>
+                        </call>
                     </defaultValue>
                 </variableClass>
             </bodyVariableClass>
@@ -943,28 +946,38 @@
                     name="Moons available? Enough goo?" fromActivityID="ActionActivityGraphLeaf_4">
                     <precondition>
                         <call functionName="And">
-                            <call functionName="Not">
-                                <call functionName="IsEmpty">
+                            <call functionName="&lt;">
+                                <call functionName="Count">
                                     <call functionName="Select">
                                     <parametricFunction>
                                     <functionCall>
-                                    <call functionName="Not">
+                                    <call functionName="Equal">
+                                    <call functionName="GetCurrentSimObject"/>
                                     <call functionName="GetVariableFrom">
                                     <variableID
-                                    writeable="false" id="BodyVariableClass_1"/>
+                                    writeable="false" id="BodyVariableClass_8">
+                                    <simObjectType/>
+                                    </variableID>
                                     <parameterID id="FunctionArgument_9"/>
                                     </call>
                                     </call>
                                     </functionCall>
-                                    <parameter name="moon" id="FunctionArgument_9">
+                                    <parameter name="miner" id="FunctionArgument_9">
                                     <simObjectType/>
                                     </parameter>
                                     </parametricFunction>
                                     <call functionName="GetAllObjectsOfType">
-                                    <objectClassID id="ResourceClass_0"/>
+                                    <objectClassID id="ActivityAgentClass_0"/>
                                     <boolean value="true"/>
                                     <boolean value="true"/>
                                     </call>
+                                    </call>
+                                </call>
+                                <call functionName="Count">
+                                    <call functionName="GetAllObjectsOfType">
+                                    <objectClassID id="ResourceClass_0"/>
+                                    <boolean value="true"/>
+                                    <boolean value="true"/>
                                     </call>
                                 </call>
                             </call>
@@ -1271,4 +1284,20 @@
             </featureInstance>
         </objectInstance>
     </situation>
+    <analysis name="Miner Population" id="Analysis_0" xAxisName=""
+        yAxisName="" deltaTicks="1" default="false" type="Series" windowSize="100">
+        <item name="NMiners" colorRed="214" colorGreen="210" colorBlue="162">
+            <call functionName="Count">
+                <call functionName="GetAllObjectsOfType">
+                    <objectClassID id="ActivityAgentClass_0"/>
+                    <boolean value="true"/>
+                    <boolean value="true"/>
+                </call>
+            </call>
+            <doubleType/>
+        </item>
+    </analysis>
+    <simulation id="Simulation_0" startSituationID="Situation_1" test="false">
+        <analysis id="Analysis_0"/>
+    </simulation>
 </XMLSeSAmModel>
