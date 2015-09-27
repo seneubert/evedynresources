@@ -172,6 +172,206 @@
         </parameter>
         <simObjectType/>
     </userFunction>
+    <userFunction todoFlag="true" name="NotIsNullFocus"
+        id="UserFunction_2"
+        documentation="Extracted from de.uniwue.ki.mas.basics.functionCall.FunctionCallDeclaration@245124288 [If Then Else(Not(IsNull(GetVariable(MoonFocus))), IncrementVarOf(Goo, -Unary(GetVariable(Yield)), GetVariable(MoonFocus)), Noop())]"
+        external="true" expert="false" inline="true">
+        <functionCall>
+            <call functionName="Not">
+                <call functionName="IsNull">
+                    <parameterID id="FunctionArgument_4"/>
+                </call>
+            </call>
+        </functionCall>
+        <parameter name="MoonFocus0" id="FunctionArgument_4">
+            <objectType/>
+        </parameter>
+        <booleanType/>
+    </userFunction>
+    <userFunction todoFlag="true" name="KillMinerSafe"
+        id="UserFunction_3"
+        documentation="Extracted from de.uniwue.ki.mas.basics.functionArgument.ParametricFunctionCallDeclarationHelper@1943954101 [Block(If Then Else(NotIsNullFocus(GetVariableFrom(MoonFocus, miner)), Block(IncrementVarOf(assignedMiners, -1, GetVariableFrom(MoonFocus, miner)), SetVariableOf(Occupied, false, GetVariableFrom(MoonFocus, miner))), Noop()), Print(&quot;Killing exhausted miner&quot;), Kill(miner))]"
+        external="true" expert="false" inline="true">
+        <functionCall>
+            <call functionName="Block">
+                <call functionName="If Then Else">
+                    <call userFunctionID="UserFunction_2">
+                        <call functionName="GetVariableFrom">
+                            <variableID writeable="false" id="BodyVariableClass_5">
+                                <objectType/>
+                            </variableID>
+                            <parameterID id="FunctionArgument_5"/>
+                        </call>
+                    </call>
+                    <call functionName="Block">
+                        <call functionName="IncrementVarOf">
+                            <variableID id="BodyVariableClass_2"/>
+                            <double value="-1.0"/>
+                            <call functionName="GetVariableFrom">
+                                <variableID writeable="false" id="BodyVariableClass_5"/>
+                                <parameterID id="FunctionArgument_5"/>
+                            </call>
+                        </call>
+                        <call functionName="SetVariableOf">
+                            <variableID id="BodyVariableClass_1"/>
+                            <boolean value="false"/>
+                            <call functionName="GetVariableFrom">
+                                <variableID writeable="false" id="BodyVariableClass_5"/>
+                                <parameterID id="FunctionArgument_5"/>
+                            </call>
+                        </call>
+                    </call>
+                    <call functionName="Noop"/>
+                </call>
+                <call functionName="Print">
+                    <string value="Killing exhausted miner"/>
+                </call>
+                <call functionName="Kill">
+                    <parameterID id="FunctionArgument_5"/>
+                </call>
+            </call>
+        </functionCall>
+        <parameter name="miner copy" id="FunctionArgument_5">
+            <simObjectType/>
+        </parameter>
+        <voidType/>
+    </userFunction>
+    <userFunction todoFlag="true" name="KillAllMinersSafe"
+        id="UserFunction_4"
+        documentation="Extracted from de.uniwue.ki.mas.basics.functionArgument.ParametricFunctionCallDeclarationHelper@380577235 [Block(If Then Else(NotIsNullFocus(GetVariableFrom(MoonFocus, miner)), Block(IncrementVarOf(assignedMiners, -1, GetVariableFrom(MoonFocus, miner)), SetVariableOf(Occupied, false, GetVariableFrom(MoonFocus, miner))), Noop()), Print(&quot;Killing exhausted miner&quot;), Kill(miner))]"
+        external="true" expert="false" inline="true">
+        <functionCall>
+            <call functionName="If Then Else">
+                <call userFunctionID="UserFunction_2">
+                    <call functionName="GetVariableFrom">
+                        <variableID writeable="false" id="BodyVariableClass_5">
+                            <objectType/>
+                        </variableID>
+                        <parameterID id="FunctionArgument_6"/>
+                    </call>
+                </call>
+                <call functionName="Block">
+                    <call functionName="IncrementVarOf">
+                        <variableID id="BodyVariableClass_2"/>
+                        <double value="-1.0"/>
+                        <call functionName="GetVariableFrom">
+                            <variableID writeable="false" id="BodyVariableClass_5"/>
+                            <parameterID id="FunctionArgument_6"/>
+                        </call>
+                    </call>
+                    <call functionName="SetVariableOf">
+                        <variableID id="BodyVariableClass_1"/>
+                        <boolean value="false"/>
+                        <call functionName="GetVariableFrom">
+                            <variableID writeable="false" id="BodyVariableClass_5"/>
+                            <parameterID id="FunctionArgument_6"/>
+                        </call>
+                    </call>
+                </call>
+                <call functionName="Noop"/>
+            </call>
+        </functionCall>
+        <parameter name="miner copy" id="FunctionArgument_6">
+            <simObjectType/>
+        </parameter>
+        <voidType/>
+    </userFunction>
+    <userFunction todoFlag="true" name="KillMinerSafe"
+        id="UserFunction_5"
+        documentation="Extracted from de.uniwue.ki.mas.basics.functionArgument.ParametricFunctionCallDeclarationHelper@182520109 [Block(If Then Else(NotIsNullFocus(GetVariableFrom(MoonFocus, miner)), Block(IncrementVarOf(assignedMiners, -1, GetVariableFrom(MoonFocus, miner)), SetVariableOf(Occupied, false, GetVariableFrom(MoonFocus, miner))), Noop()), Print(&quot;Killing exhausted miner&quot;), Kill(miner))]"
+        external="true" expert="false" inline="true">
+        <functionCall>
+            <call functionName="Block">
+                <call functionName="If Then Else">
+                    <call userFunctionID="UserFunction_2">
+                        <call functionName="GetVariableFrom">
+                            <variableID writeable="false" id="BodyVariableClass_5">
+                                <objectType/>
+                            </variableID>
+                            <parameterID id="FunctionArgument_7"/>
+                        </call>
+                    </call>
+                    <call functionName="Block">
+                        <call functionName="IncrementVarOf">
+                            <variableID id="BodyVariableClass_2"/>
+                            <double value="-1.0"/>
+                            <call functionName="GetVariableFrom">
+                                <variableID writeable="false" id="BodyVariableClass_5"/>
+                                <parameterID id="FunctionArgument_7"/>
+                            </call>
+                        </call>
+                        <call functionName="SetVariableOf">
+                            <variableID id="BodyVariableClass_1"/>
+                            <boolean value="false"/>
+                            <call functionName="GetVariableFrom">
+                                <variableID writeable="false" id="BodyVariableClass_5"/>
+                                <parameterID id="FunctionArgument_7"/>
+                            </call>
+                        </call>
+                    </call>
+                    <call functionName="Noop"/>
+                </call>
+                <call functionName="Print">
+                    <string value="Killing exhausted miner"/>
+                </call>
+                <call functionName="Kill">
+                    <parameterID id="FunctionArgument_7"/>
+                </call>
+            </call>
+        </functionCall>
+        <parameter name="miner copy" id="FunctionArgument_7">
+            <simObjectType/>
+        </parameter>
+        <voidType/>
+    </userFunction>
+    <userFunction todoFlag="true" name="KillMinerSafe"
+        id="UserFunction_6"
+        documentation="Extracted from de.uniwue.ki.mas.basics.functionArgument.ParametricFunctionCallDeclarationHelper@661969527 [Block(If Then Else(NotIsNullFocus(GetVariableFrom(MoonFocus, miner)), Block(IncrementVarOf(assignedMiners, -1, GetVariableFrom(MoonFocus, miner)), SetVariableOf(Occupied, false, GetVariableFrom(MoonFocus, miner))), Noop()), Print(&quot;Killing exhausted miner&quot;), Kill(miner))]"
+        external="true" expert="false" inline="true">
+        <functionCall>
+            <call functionName="Block">
+                <call functionName="If Then Else">
+                    <call userFunctionID="UserFunction_2">
+                        <call functionName="GetVariableFrom">
+                            <variableID writeable="false" id="BodyVariableClass_5">
+                                <objectType/>
+                            </variableID>
+                            <parameterID id="FunctionArgument_8"/>
+                        </call>
+                    </call>
+                    <call functionName="Block">
+                        <call functionName="IncrementVarOf">
+                            <variableID id="BodyVariableClass_2"/>
+                            <double value="-1.0"/>
+                            <call functionName="GetVariableFrom">
+                                <variableID writeable="false" id="BodyVariableClass_5"/>
+                                <parameterID id="FunctionArgument_8"/>
+                            </call>
+                        </call>
+                        <call functionName="SetVariableOf">
+                            <variableID id="BodyVariableClass_1"/>
+                            <boolean value="false"/>
+                            <call functionName="GetVariableFrom">
+                                <variableID writeable="false" id="BodyVariableClass_5"/>
+                                <parameterID id="FunctionArgument_8"/>
+                            </call>
+                        </call>
+                    </call>
+                    <call functionName="Noop"/>
+                </call>
+                <call functionName="Print">
+                    <string value="Killing exhausted miner"/>
+                </call>
+                <call functionName="Kill">
+                    <parameterID id="FunctionArgument_8"/>
+                </call>
+            </call>
+        </functionCall>
+        <parameter name="miner copy" id="FunctionArgument_8">
+            <simObjectType/>
+        </parameter>
+        <voidType/>
+    </userFunction>
     <ressourceClass name="Moon" id="ResourceClass_0">
         <features>
             <buildin>Standard Functions</buildin>
@@ -210,6 +410,17 @@
                     </defaultValue>
                 </variableClass>
             </bodyVariableClass>
+            <bodyVariableClass id="BodyVariableClass_2">
+                <variableClass name="assignedMiners"
+                    id="VariableClass_2" writeable="true"
+                    external="true" partOfName="false"
+                    configValue="true" analysisValue="true">
+                    <doubleType/>
+                    <defaultValue>
+                        <double value="0.0"/>
+                    </defaultValue>
+                </variableClass>
+            </bodyVariableClass>
         </bodyClass>
         <interactionelements/>
     </ressourceClass>
@@ -231,9 +442,9 @@
             </features>
         </features>
         <bodyClass>
-            <bodyVariableClass id="BodyVariableClass_2">
+            <bodyVariableClass id="BodyVariableClass_3">
                 <variableClass name="RadiusOfActivity"
-                    id="VariableClass_2" writeable="false"
+                    id="VariableClass_3" writeable="false"
                     external="false" partOfName="false"
                     configValue="true" analysisValue="true">
                     <doubleType/>
@@ -242,8 +453,8 @@
                     </defaultValue>
                 </variableClass>
             </bodyVariableClass>
-            <bodyVariableClass id="BodyVariableClass_3">
-                <variableClass name="HarvestedGoo" id="VariableClass_3"
+            <bodyVariableClass id="BodyVariableClass_4">
+                <variableClass name="HarvestedGoo" id="VariableClass_4"
                     hasNextValue="true" writeable="true" external="true"
                     partOfName="false" configValue="true" analysisValue="true">
                     <doubleType/>
@@ -254,17 +465,17 @@
                         <call functionName="-">
                             <call functionName="GetVariable">
                                 <variableID external="false"
-                                    writeable="false" id="BodyVariableClass_3"/>
+                                    writeable="false" id="BodyVariableClass_4"/>
                             </call>
                             <call functionName="GetVariable">
-                                <variableID id="BodyVariableClass_11"/>
+                                <variableID id="BodyVariableClass_12"/>
                             </call>
                         </call>
                     </nextValue>
                 </variableClass>
             </bodyVariableClass>
-            <bodyVariableClass id="BodyVariableClass_4">
-                <variableClass name="MoonFocus" id="VariableClass_4"
+            <bodyVariableClass id="BodyVariableClass_5">
+                <variableClass name="MoonFocus" id="VariableClass_5"
                     writeable="true" external="true" partOfName="false"
                     configValue="true" analysisValue="true">
                     <simObjectType/>
@@ -273,9 +484,9 @@
                     </defaultValue>
                 </variableClass>
             </bodyVariableClass>
-            <bodyVariableClass id="BodyVariableClass_5">
+            <bodyVariableClass id="BodyVariableClass_6">
                 <variableClass name="ExpansionThreshold"
-                    id="VariableClass_5" writeable="false"
+                    id="VariableClass_6" writeable="false"
                     external="false" partOfName="false"
                     configValue="true" analysisValue="true">
                     <doubleType/>
@@ -284,8 +495,8 @@
                     </defaultValue>
                 </variableClass>
             </bodyVariableClass>
-            <bodyVariableClass id="BodyVariableClass_6">
-                <variableClass name="ExpansionCost" id="VariableClass_6"
+            <bodyVariableClass id="BodyVariableClass_7">
+                <variableClass name="ExpansionCost" id="VariableClass_7"
                     writeable="false" external="false"
                     partOfName="false" configValue="true" analysisValue="true">
                     <doubleType/>
@@ -294,9 +505,9 @@
                     </defaultValue>
                 </variableClass>
             </bodyVariableClass>
-            <bodyVariableClass id="BodyVariableClass_7">
+            <bodyVariableClass id="BodyVariableClass_8">
                 <variableClass name="MoveCostFactor"
-                    id="VariableClass_7" writeable="false"
+                    id="VariableClass_8" writeable="false"
                     external="false" partOfName="false"
                     configValue="true" analysisValue="true">
                     <doubleType/>
@@ -305,8 +516,8 @@
                     </defaultValue>
                 </variableClass>
             </bodyVariableClass>
-            <bodyVariableClass id="BodyVariableClass_8">
-                <variableClass name="Alliance" id="VariableClass_8"
+            <bodyVariableClass id="BodyVariableClass_9">
+                <variableClass name="Alliance" id="VariableClass_9"
                     writeable="true" external="true" partOfName="false"
                     configValue="true" analysisValue="true">
                     <simObjectType id="ActivityAgentClass_1"/>
@@ -315,8 +526,8 @@
                     </defaultValue>
                 </variableClass>
             </bodyVariableClass>
-            <bodyVariableClass id="BodyVariableClass_9">
-                <variableClass name="Yield" id="VariableClass_9"
+            <bodyVariableClass id="BodyVariableClass_10">
+                <variableClass name="Yield" id="VariableClass_10"
                     writeable="true" external="true" partOfName="false"
                     configValue="true" analysisValue="true">
                     <doubleType/>
@@ -325,8 +536,8 @@
                     </defaultValue>
                 </variableClass>
             </bodyVariableClass>
-            <bodyVariableClass id="BodyVariableClass_10">
-                <variableClass name="_travelfee" id="VariableClass_10"
+            <bodyVariableClass id="BodyVariableClass_11">
+                <variableClass name="_travelfee" id="VariableClass_11"
                     writeable="true" external="false" partOfName="false"
                     configValue="false" analysisValue="false">
                     <doubleType/>
@@ -335,8 +546,8 @@
                     </defaultValue>
                 </variableClass>
             </bodyVariableClass>
-            <bodyVariableClass id="BodyVariableClass_11">
-                <variableClass name="upkeep" id="VariableClass_11"
+            <bodyVariableClass id="BodyVariableClass_12">
+                <variableClass name="upkeep" id="VariableClass_12"
                     writeable="false" external="false"
                     partOfName="false" configValue="true" analysisValue="true">
                     <doubleType/>
@@ -348,10 +559,63 @@
                     </defaultValue>
                 </variableClass>
             </bodyVariableClass>
+            <bodyVariableClass id="BodyVariableClass_13">
+                <variableClass name="enemies" id="VariableClass_13"
+                    writeable="true" external="false" partOfName="false"
+                    configValue="true" analysisValue="true">
+                    <listType>
+                        <simObjectType/>
+                    </listType>
+                    <defaultValue>
+                        <call functionName="CreateList">
+                            <listType>
+                                <simObjectType/>
+                            </listType>
+                        </call>
+                    </defaultValue>
+                </variableClass>
+            </bodyVariableClass>
+            <bodyVariableClass id="BodyVariableClass_14">
+                <variableClass name="friends" id="VariableClass_14"
+                    writeable="true" external="false" partOfName="false"
+                    configValue="true" analysisValue="true">
+                    <listType>
+                        <simObjectType/>
+                    </listType>
+                    <defaultValue>
+                        <call functionName="CreateList">
+                            <listType>
+                                <simObjectType/>
+                            </listType>
+                        </call>
+                    </defaultValue>
+                </variableClass>
+            </bodyVariableClass>
+            <bodyVariableClass id="BodyVariableClass_15">
+                <variableClass name="battlestrength"
+                    id="VariableClass_15" writeable="true"
+                    external="false" partOfName="false"
+                    configValue="true" analysisValue="true">
+                    <doubleType/>
+                    <defaultValue>
+                        <double value="0.0"/>
+                    </defaultValue>
+                </variableClass>
+            </bodyVariableClass>
+            <bodyVariableClass id="BodyVariableClass_16">
+                <variableClass name="Battlecost" id="VariableClass_16"
+                    writeable="false" external="false"
+                    partOfName="false" configValue="true" analysisValue="true">
+                    <doubleType/>
+                    <defaultValue>
+                        <double value="20.0"/>
+                    </defaultValue>
+                </variableClass>
+            </bodyVariableClass>
         </bodyClass>
         <interactionelements/>
         <reasoning>
-            <composedActivity name="Reasoning" id="ActivityGraph_0">
+            <composedActivity name="Harvesting" id="ActivityGraph_0">
                 <entryActivity name="Entry Activity"
                     id="EntryActivityGraphLeaf_0" x="143" y="202"
                     width="15" height="15"/>
@@ -366,43 +630,18 @@
                     width="180" height="121">
                     <actionRule>
                         <action>
-                            <call functionName="IncrementVarOf">
-                                <variableID id="BodyVariableClass_0"/>
-                                <call functionName="-Unary">
+                            <call functionName="If Then Else">
+                                <call userFunctionID="UserFunction_2">
                                     <call functionName="GetVariable">
                                     <variableID external="false"
-                                    writeable="false" id="BodyVariableClass_9"/>
-                                    </call>
-                                </call>
-                                <call functionName="GetVariable">
-                                    <variableID external="false"
-                                    writeable="false" id="BodyVariableClass_4"/>
-                                </call>
-                            </call>
-                        </action>
-                    </actionRule>
-                    <actionRule>
-                        <action>
-                            <call functionName="IncrementVar">
-                                <variableID external="false" id="BodyVariableClass_3"/>
-                                <call functionName="*">
-                                    <call functionName="-">
-                                    <double value="1.0"/>
-                                    <call functionName="GetVariableFrom">
-                                    <variableID id="BodyVariableClass_12"/>
-                                    <call functionName="GetVariable">
-                                    <variableID
-                                    external="false"
-                                    writeable="false" id="BodyVariableClass_8">
-                                    <simObjectType/>
+                                    writeable="false" id="BodyVariableClass_9">
+                                    <objectType/>
                                     </variableID>
                                     </call>
-                                    </call>
-                                    </call>
-                                    <call functionName="GetVariable">
-                                    <variableID external="false"
-                                    writeable="false" id="BodyVariableClass_9"/>
-                                    </call>
+                                </call>
+                                <call functionName="Noop"/>
+                                <call functionName="Print">
+                                    <string value="Trying to pay tax to NULL alliance"/>
                                 </call>
                             </call>
                         </action>
@@ -410,20 +649,42 @@
                     <actionRule>
                         <action>
                             <call functionName="If Then Else">
-                                <call functionName="&lt;">
-                                    <call functionName="GetVariableFrom">
-                                    <variableID writeable="false" id="BodyVariableClass_0"/>
+                                <call functionName="Equal">
                                     <call functionName="GetVariable">
                                     <variableID external="false"
-                                    writeable="false" id="BodyVariableClass_4"/>
+                                    writeable="false" id="BodyVariableClass_5"/>
                                     </call>
-                                    </call>
-                                    <double value="1.0"/>
+                                    <simObject/>
                                 </call>
-                                <call functionName="Kill">
+                                <call functionName="Print">
+                                    <string value="Trying to harvest from NULL moon"/>
+                                </call>
+                                <call functionName="Noop"/>
+                            </call>
+                        </action>
+                    </actionRule>
+                    <actionRule>
+                        <action>
+                            <call functionName="If Then Else">
+                                <call userFunctionID="UserFunction_2">
                                     <call functionName="GetVariable">
                                     <variableID external="false"
-                                    writeable="false" id="BodyVariableClass_4"/>
+                                    writeable="false" id="BodyVariableClass_5">
+                                    <objectType/>
+                                    </variableID>
+                                    </call>
+                                </call>
+                                <call functionName="IncrementVarOf">
+                                    <variableID id="BodyVariableClass_0"/>
+                                    <call functionName="-Unary">
+                                    <call functionName="GetVariable">
+                                    <variableID external="false"
+                                    writeable="false" id="BodyVariableClass_10"/>
+                                    </call>
+                                    </call>
+                                    <call functionName="GetVariable">
+                                    <variableID external="false"
+                                    writeable="false" id="BodyVariableClass_5"/>
                                     </call>
                                 </call>
                                 <call functionName="Noop"/>
@@ -432,29 +693,113 @@
                     </actionRule>
                     <actionRule>
                         <action>
-                            <call functionName="IncrementVarOf">
-                                <variableID id="BodyVariableClass_13"/>
-                                <call functionName="*">
+                            <call functionName="If Then Else">
+                                <call userFunctionID="UserFunction_2">
                                     <call functionName="GetVariable">
                                     <variableID external="false"
-                                    writeable="false" id="BodyVariableClass_9"/>
+                                    writeable="false" id="BodyVariableClass_5">
+                                    <objectType/>
+                                    </variableID>
+                                    </call>
+                                </call>
+                                <call functionName="IncrementVar">
+                                    <variableID external="false" id="BodyVariableClass_4"/>
+                                    <call functionName="*">
+                                    <call functionName="-">
+                                    <double value="1.0"/>
+                                    <call functionName="GetVariableFrom">
+                                    <variableID id="BodyVariableClass_17"/>
+                                    <call functionName="GetVariable">
+                                    <variableID
+                                    external="false"
+                                    writeable="false" id="BodyVariableClass_9">
+                                    <simObjectType/>
+                                    </variableID>
+                                    </call>
+                                    </call>
+                                    </call>
+                                    <call functionName="GetVariable">
+                                    <variableID external="false"
+                                    writeable="false" id="BodyVariableClass_10"/>
+                                    </call>
+                                    </call>
+                                </call>
+                                <call functionName="Noop"/>
+                            </call>
+                        </action>
+                    </actionRule>
+                    <actionRule>
+                        <action>
+                            <call functionName="If Then Else">
+                                <call functionName="And">
+                                    <call userFunctionID="UserFunction_2">
+                                    <call functionName="GetVariable">
+                                    <variableID external="false"
+                                    writeable="false" id="BodyVariableClass_5">
+                                    <objectType/>
+                                    </variableID>
+                                    </call>
+                                    </call>
+                                    <call functionName="&lt;">
+                                    <call functionName="GetVariableFrom">
+                                    <variableID
+                                    writeable="false" id="BodyVariableClass_0"/>
+                                    <call functionName="GetVariable">
+                                    <variableID
+                                    external="false"
+                                    writeable="false" id="BodyVariableClass_5"/>
+                                    </call>
+                                    </call>
+                                    <double value="1.0"/>
+                                    </call>
+                                </call>
+                                <call functionName="Kill">
+                                    <call functionName="GetVariable">
+                                    <variableID external="false"
+                                    writeable="false" id="BodyVariableClass_5"/>
+                                    </call>
+                                </call>
+                                <call functionName="Noop"/>
+                            </call>
+                        </action>
+                    </actionRule>
+                    <actionRule>
+                        <action>
+                            <call functionName="If Then Else">
+                                <call userFunctionID="UserFunction_2">
+                                    <call functionName="GetVariable">
+                                    <variableID external="false"
+                                    writeable="false" id="BodyVariableClass_5">
+                                    <objectType/>
+                                    </variableID>
+                                    </call>
+                                </call>
+                                <call functionName="IncrementVarOf">
+                                    <variableID id="BodyVariableClass_18"/>
+                                    <call functionName="*">
+                                    <call functionName="GetVariable">
+                                    <variableID external="false"
+                                    writeable="false" id="BodyVariableClass_10"/>
                                     </call>
                                     <call functionName="GetVariableFrom">
-                                    <variableID id="BodyVariableClass_12"/>
+                                    <variableID id="BodyVariableClass_17"/>
+                                    <call functionName="GetVariable">
+                                    <variableID
+                                    external="false"
+                                    writeable="false" id="BodyVariableClass_9">
+                                    <simObjectType/>
+                                    </variableID>
+                                    </call>
+                                    </call>
+                                    </call>
                                     <call functionName="GetVariable">
                                     <variableID external="false"
-                                    writeable="false" id="BodyVariableClass_8">
+                                    writeable="false" id="BodyVariableClass_9">
                                     <simObjectType/>
                                     </variableID>
                                     </call>
-                                    </call>
                                 </call>
-                                <call functionName="GetVariable">
-                                    <variableID external="false"
-                                    writeable="false" id="BodyVariableClass_8">
-                                    <simObjectType/>
-                                    </variableID>
-                                </call>
+                                <call functionName="Noop"/>
                             </call>
                         </action>
                     </actionRule>
@@ -475,9 +820,15 @@
                                     <functionCall>
                                     <call functionName="And">
                                     <call functionName="Not">
+                                    <call functionName="IsNull">
+
+                                    <parameterID id="FunctionArgument_9"/>
+                                    </call>
+                                    </call>
+                                    <call functionName="Not">
                                     <call functionName="IsDead">
 
-                                    <parameterID id="FunctionArgument_4"/>
+                                    <parameterID id="FunctionArgument_9"/>
                                     </call>
                                     </call>
                                     <call functionName="Not">
@@ -486,12 +837,12 @@
                                     <variableID
                                     writeable="false" id="BodyVariableClass_1"/>
 
-                                    <parameterID id="FunctionArgument_4"/>
+                                    <parameterID id="FunctionArgument_9"/>
                                     </call>
                                     </call>
                                     </call>
                                     </functionCall>
-                                    <parameter name="moon" id="FunctionArgument_4">
+                                    <parameter name="moon" id="FunctionArgument_9">
                                     <simObjectType/>
                                     </parameter>
                                     </parametricFunction>
@@ -505,19 +856,19 @@
                                     <double value="0.0"/>
                                 </call>
                                 <call functionName="SetVariable">
-                                    <variableID external="false" id="BodyVariableClass_4"/>
+                                    <variableID external="false" id="BodyVariableClass_5"/>
                                     <call functionName="Maximize">
                                     <parametricFunction>
                                     <functionCall>
                                     <call userFunctionID="UserFunction_0">
-                                    <parameterID id="FunctionArgument_5"/>
-                                    <parameterID id="FunctionArgument_6"/>
+                                    <parameterID id="FunctionArgument_10"/>
+                                    <parameterID id="FunctionArgument_11"/>
                                     </call>
                                     </functionCall>
-                                    <parameter name="m1" id="FunctionArgument_5">
+                                    <parameter name="m1" id="FunctionArgument_10">
                                     <simObjectType/>
                                     </parameter>
-                                    <parameter name="m2" id="FunctionArgument_6">
+                                    <parameter name="m2" id="FunctionArgument_11">
                                     <simObjectType/>
                                     </parameter>
                                     </parametricFunction>
@@ -528,7 +879,7 @@
                                     <call functionName="Not">
                                     <call functionName="IsDead">
 
-                                    <parameterID id="FunctionArgument_7"/>
+                                    <parameterID id="FunctionArgument_12"/>
                                     </call>
                                     </call>
                                     <call functionName="Not">
@@ -537,12 +888,12 @@
                                     <variableID
                                     writeable="false" id="BodyVariableClass_1"/>
 
-                                    <parameterID id="FunctionArgument_7"/>
+                                    <parameterID id="FunctionArgument_12"/>
                                     </call>
                                     </call>
                                     </call>
                                     </functionCall>
-                                    <parameter name="moon" id="FunctionArgument_7">
+                                    <parameter name="moon" id="FunctionArgument_12">
                                     <simObjectType/>
                                     </parameter>
                                     </parametricFunction>
@@ -554,7 +905,10 @@
                                     </call>
                                     </call>
                                 </call>
-                                <call functionName="Noop"/>
+                                <call functionName="SetVariable">
+                                    <variableID external="false" id="BodyVariableClass_5"/>
+                                    <simObject/>
+                                </call>
                             </call>
                         </action>
                     </actionRule>
@@ -565,7 +919,7 @@
                                     <call functionName="IsNull">
                                     <call functionName="GetVariable">
                                     <variableID external="false"
-                                    writeable="false" id="BodyVariableClass_4">
+                                    writeable="false" id="BodyVariableClass_5">
                                     <objectType/>
                                     </variableID>
                                     </call>
@@ -573,7 +927,7 @@
                                 </call>
                                 <call functionName="Block">
                                     <call functionName="SetVariable">
-                                    <variableID id="BodyVariableClass_10"/>
+                                    <variableID id="BodyVariableClass_11"/>
                                     <call functionName="*">
                                     <call functionName="Distance">
                                     <call functionName="GetMySpatialInfo"/>
@@ -581,12 +935,12 @@
                                     <call functionName="GetVariable">
                                     <variableID
                                     external="false"
-                                    writeable="false" id="BodyVariableClass_4"/>
+                                    writeable="false" id="BodyVariableClass_5"/>
                                     </call>
                                     </call>
                                     </call>
                                     <call functionName="GetVariable">
-                                    <variableID id="BodyVariableClass_7"/>
+                                    <variableID id="BodyVariableClass_8"/>
                                     </call>
                                     </call>
                                     </call>
@@ -594,12 +948,22 @@
                                     <call functionName="&lt;=">
                                     <call functionName="GetVariable">
                                     <variableID
-                                    writeable="false" id="BodyVariableClass_10"/>
+                                    writeable="false" id="BodyVariableClass_11"/>
                                     </call>
                                     <call functionName="GetVariable">
                                     <variableID
                                     external="false"
-                                    writeable="false" id="BodyVariableClass_3"/>
+                                    writeable="false" id="BodyVariableClass_4"/>
+                                    </call>
+                                    </call>
+                                    <call functionName="Block">
+                                    <call functionName="IncrementVarOf">
+                                    <variableID id="BodyVariableClass_2"/>
+                                    <double value="1.0"/>
+                                    <call functionName="GetVariable">
+                                    <variableID
+                                    external="false"
+                                    writeable="false" id="BodyVariableClass_5"/>
                                     </call>
                                     </call>
                                     <call functionName="SetVariableOf">
@@ -608,11 +972,12 @@
                                     <call functionName="GetVariable">
                                     <variableID
                                     external="false"
-                                    writeable="false" id="BodyVariableClass_4"/>
+                                    writeable="false" id="BodyVariableClass_5"/>
+                                    </call>
                                     </call>
                                     </call>
                                     <call functionName="SetVariable">
-                                    <variableID external="false" id="BodyVariableClass_4"/>
+                                    <variableID external="false" id="BodyVariableClass_5"/>
                                     <simObject/>
                                     </call>
                                     </call>
@@ -630,28 +995,39 @@
                     width="90" height="70">
                     <actionRule>
                         <action>
-                            <call functionName="Block">
-                                <call functionName="BeamTo">
+                            <call functionName="If Then Else">
+                                <call userFunctionID="UserFunction_2">
+                                    <call functionName="GetVariable">
+                                    <variableID external="false"
+                                    writeable="false" id="BodyVariableClass_5">
+                                    <objectType/>
+                                    </variableID>
+                                    </call>
+                                </call>
+                                <call functionName="Block">
+                                    <call functionName="BeamTo">
                                     <call functionName="GetMySpatialInfo"/>
                                     <call functionName="GetPosition">
                                     <call functionName="GetSpatialInfo">
                                     <call functionName="GetVariable">
                                     <variableID
                                     external="false"
-                                    writeable="false" id="BodyVariableClass_4"/>
+                                    writeable="false" id="BodyVariableClass_5"/>
                                     </call>
                                     </call>
                                     </call>
-                                </call>
-                                <call functionName="IncrementVar">
-                                    <variableID external="false" id="BodyVariableClass_3"/>
+                                    </call>
+                                    <call functionName="IncrementVar">
+                                    <variableID external="false" id="BodyVariableClass_4"/>
                                     <call functionName="-Unary">
                                     <call functionName="GetVariable">
                                     <variableID
-                                    writeable="false" id="BodyVariableClass_10"/>
+                                    writeable="false" id="BodyVariableClass_11"/>
+                                    </call>
                                     </call>
                                     </call>
                                 </call>
+                                <call functionName="Noop"/>
                             </call>
                         </action>
                     </actionRule>
@@ -659,13 +1035,8 @@
                         <double value="1.0"/>
                     </stayTime>
                 </actionActivity>
-                <actionActivity name="Found Moon"
-                    id="ActionActivityGraphLeaf_3" x="406" y="175"
-                    width="131" height="70" instantly="true">
-                    <stayTime>
-                        <double value="1.0"/>
-                    </stayTime>
-                </actionActivity>
+                <decisionActivity name="Is Moon in Range?"
+                    id="DecisionGraphLeaf_0" x="421" y="170" width="190" height="70"/>
                 <chainRule toActivityID="ActionActivityGraphLeaf_1" fromActivityID="EntryActivityGraphLeaf_0">
                     <precondition>
                         <boolean value="true"/>
@@ -674,22 +1045,32 @@
                 <chainRule toActivityID="ActionActivityGraphLeaf_1" fromActivityID="ActionActivityGraphLeaf_0">
                     <controlPoint x="521" y="341"/>
                     <precondition>
-                        <call functionName="IsDead">
-                            <call functionName="GetVariable">
-                                <variableID external="false"
-                                    writeable="false" id="BodyVariableClass_4"/>
+                        <call functionName="Or">
+                            <call functionName="IsNull">
+                                <call functionName="GetVariable">
+                                    <variableID external="false"
+                                    writeable="false" id="BodyVariableClass_5">
+                                    <objectType/>
+                                    </variableID>
+                                </call>
+                            </call>
+                            <call functionName="IsDead">
+                                <call functionName="GetVariable">
+                                    <variableID external="false"
+                                    writeable="false" id="BodyVariableClass_5"/>
+                                </call>
                             </call>
                         </call>
                     </precondition>
                 </chainRule>
-                <chainRule toActivityID="ActionActivityGraphLeaf_3" fromActivityID="ActionActivityGraphLeaf_1">
+                <chainRule toActivityID="DecisionGraphLeaf_0" fromActivityID="ActionActivityGraphLeaf_1">
                     <precondition>
                         <call functionName="And">
                             <call functionName="Not">
                                 <call functionName="IsNull">
                                     <call functionName="GetVariable">
                                     <variableID external="false"
-                                    writeable="false" id="BodyVariableClass_4">
+                                    writeable="false" id="BodyVariableClass_5">
                                     <objectType/>
                                     </variableID>
                                     </call>
@@ -699,7 +1080,7 @@
                                 <call functionName="IsDead">
                                     <call functionName="GetVariable">
                                     <variableID external="false"
-                                    writeable="false" id="BodyVariableClass_4"/>
+                                    writeable="false" id="BodyVariableClass_5"/>
                                     </call>
                                 </call>
                             </call>
@@ -707,7 +1088,7 @@
                     </precondition>
                 </chainRule>
                 <chainRule toActivityID="ActionActivityGraphLeaf_0"
-                    name="Moon in range" fromActivityID="ActionActivityGraphLeaf_3">
+                    name="Moon in range" fromActivityID="DecisionGraphLeaf_0">
                     <precondition>
                         <call functionName="&lt;">
                             <call functionName="Distance">
@@ -715,34 +1096,340 @@
                                 <call functionName="GetSpatialInfo">
                                     <call functionName="GetVariable">
                                     <variableID external="false"
-                                    writeable="false" id="BodyVariableClass_4"/>
+                                    writeable="false" id="BodyVariableClass_5"/>
                                     </call>
                                 </call>
                             </call>
                             <call functionName="GetVariable">
-                                <variableID id="BodyVariableClass_2"/>
+                                <variableID id="BodyVariableClass_3"/>
                             </call>
                         </call>
                     </precondition>
                 </chainRule>
-                <chainRule toActivityID="ActionActivityGraphLeaf_0" fromActivityID="ActionActivityGraphLeaf_2">
+                <chainRule toActivityID="ActionActivityGraphLeaf_1" fromActivityID="ActionActivityGraphLeaf_2">
+                    <precondition>
+                        <call functionName=">">
+                            <call functionName="GetVariableFrom">
+                                <variableID writeable="false" id="BodyVariableClass_2"/>
+                                <call functionName="GetVariable">
+                                    <variableID external="false"
+                                    writeable="false" id="BodyVariableClass_5"/>
+                                </call>
+                            </call>
+                            <double value="1.0"/>
+                        </call>
+                    </precondition>
+                </chainRule>
+                <otherwiseChainRule
+                    toActivityID="ActionActivityGraphLeaf_2" fromDecisionActivityID="DecisionGraphLeaf_0"/>
+                <otherwiseChainRule
+                    toActivityID="ActionActivityGraphLeaf_0" fromDecisionActivityID="ActionActivityGraphLeaf_2"/>
+            </composedActivity>
+        </reasoning>
+        <reasoning>
+            <composedActivity name="Aggression" id="ActivityGraph_1">
+                <entryActivity name="Entry Activity"
+                    id="EntryActivityGraphLeaf_1" x="103" y="260"
+                    width="15" height="15"/>
+                <exitActivity name="Exit Activity"
+                    id="ExitActivityGraphLeaf_1" x="41" y="207"
+                    width="15" height="15"/>
+                <emergencyActivity name="Emergency Activity"
+                    id="EmergencyActivityGraphLeaf_1" x="246" y="13"
+                    width="130" height="50"/>
+                <actionActivity name="Idle"
+                    id="ActionActivityGraphLeaf_3" x="221" y="194"
+                    width="90" height="70" type="state like">
+                    <stayTime>
+                        <double value="1.0"/>
+                    </stayTime>
+                </actionActivity>
+                <actionActivity name="Battle"
+                    id="ActionActivityGraphLeaf_4" x="477" y="169"
+                    width="90" height="70" instantly="true" type="state like">
+                    <actionRule>
+                        <action>
+                            <call functionName="SetVariable">
+                                <variableID id="BodyVariableClass_13"/>
+                                <call functionName="AsList">
+                                    <call functionName="Select">
+                                    <parametricFunction>
+                                    <functionCall>
+                                    <call functionName="And">
+                                    <call functionName="InstanceOf">
+                                    <parameterID id="FunctionArgument_13"/>
+                                    <objectClassID id="ActivityAgentClass_0"/>
+                                    </call>
+                                    <call functionName="Not">
+                                    <call functionName="IsDead">
+                                    <parameterID id="FunctionArgument_13"/>
+                                    </call>
+                                    </call>
+                                    <call functionName="Not">
+                                    <call functionName="Equal">
+                                    <call functionName="GetVariable">
+
+                                    <variableID
+                                    external="false"
+                                    writeable="false" id="BodyVariableClass_9">
+                                    <simObjectType/>
+                                    </variableID>
+                                    </call>
+                                    <call functionName="GetVariableFrom">
+
+                                    <variableID
+                                    writeable="false" id="BodyVariableClass_9">
+                                    <simObjectType/>
+                                    </variableID>
+
+                                    <parameterID id="FunctionArgument_13"/>
+                                    </call>
+                                    </call>
+                                    </call>
+                                    </call>
+                                    </functionCall>
+                                    <parameter name="obj" id="FunctionArgument_13">
+                                    <simObjectType/>
+                                    </parameter>
+                                    </parametricFunction>
+                                    <call functionName="ObserveObjectsOnPosition">
+                                    <call functionName="GetMyPosition"/>
+                                    <call functionName="GetVariable">
+                                    <variableID id="BodyVariableClass_3"/>
+                                    </call>
+                                    <boolean value="false"/>
+                                    <boolean value="false"/>
+                                    </call>
+                                    </call>
+                                </call>
+                            </call>
+                        </action>
+                    </actionRule>
+                    <actionRule>
+                        <action>
+                            <call functionName="SetVariable">
+                                <variableID id="BodyVariableClass_14"/>
+                                <call functionName="AsList">
+                                    <call functionName="Select">
+                                    <parametricFunction>
+                                    <functionCall>
+                                    <call functionName="And">
+                                    <call functionName="InstanceOf">
+                                    <parameterID id="FunctionArgument_14"/>
+                                    <objectClassID id="ActivityAgentClass_0"/>
+                                    </call>
+                                    <call functionName="Not">
+                                    <call functionName="IsDead">
+                                    <parameterID id="FunctionArgument_14"/>
+                                    </call>
+                                    </call>
+                                    <call functionName="Equal">
+                                    <call functionName="GetVariable">
+                                    <variableID
+                                    external="false"
+                                    writeable="false" id="BodyVariableClass_9">
+                                    <simObjectType/>
+                                    </variableID>
+                                    </call>
+                                    <call functionName="GetVariableFrom">
+                                    <variableID
+                                    writeable="false" id="BodyVariableClass_9">
+                                    <simObjectType/>
+                                    </variableID>
+                                    <parameterID id="FunctionArgument_14"/>
+                                    </call>
+                                    </call>
+                                    </call>
+                                    </functionCall>
+                                    <parameter name="obj" id="FunctionArgument_14">
+                                    <simObjectType/>
+                                    </parameter>
+                                    </parametricFunction>
+                                    <call functionName="ObserveObjectsOnPosition">
+                                    <call functionName="GetMyPosition"/>
+                                    <call functionName="GetVariable">
+                                    <variableID id="BodyVariableClass_3"/>
+                                    </call>
+                                    <boolean value="true"/>
+                                    <boolean value="false"/>
+                                    </call>
+                                    </call>
+                                </call>
+                            </call>
+                        </action>
+                    </actionRule>
+                    <actionRule>
+                        <action>
+                            <call functionName="SetVariable">
+                                <variableID id="BodyVariableClass_15"/>
+                                <call functionName="/">
+                                    <call functionName="Count">
+                                    <call functionName="GetVariable">
+                                    <variableID
+                                    writeable="false" id="BodyVariableClass_14"/>
+                                    </call>
+                                    </call>
+                                    <call functionName="+">
+                                    <call functionName="Count">
+                                    <call functionName="GetVariable">
+                                    <variableID
+                                    writeable="false" id="BodyVariableClass_14"/>
+                                    </call>
+                                    </call>
+                                    <call functionName="Count">
+                                    <call functionName="GetVariable">
+                                    <variableID
+                                    writeable="false" id="BodyVariableClass_13"/>
+                                    </call>
+                                    </call>
+                                    </call>
+                                </call>
+                            </call>
+                        </action>
+                    </actionRule>
+                    <actionRule>
+                        <action>
+                            <call functionName="ForElements">
+                                <parametricFunction>
+                                    <functionCall>
+                                    <call functionName="If Then Else">
+                                    <call functionName="Not">
+                                    <call functionName="IsDead">
+                                    <parameterID id="FunctionArgument_15"/>
+                                    </call>
+                                    </call>
+                                    <call functionName="If Then Else">
+                                    <call functionName="And">
+                                    <call functionName=">">
+                                    <call functionName="GetVariable">
+                                    <variableID
+                                    external="false"
+                                    writeable="false" id="BodyVariableClass_4"/>
+                                    </call>
+                                    <call functionName="GetVariable">
+                                    <variableID id="BodyVariableClass_16"/>
+                                    </call>
+                                    </call>
+                                    <call functionName="&lt;">
+                                    <call functionName="RandomDouble">
+                                    <double value="0.0"/>
+                                    <double value="1.0"/>
+                                    </call>
+                                    <call functionName="GetVariable">
+                                    <variableID
+                                    writeable="false" id="BodyVariableClass_15"/>
+                                    </call>
+                                    </call>
+                                    </call>
+                                    <call functionName="Block">
+                                    <call functionName="SetVariableOf">
+                                    <variableID id="BodyVariableClass_4"/>
+                                    <double value="-1000.0"/>
+                                    <parameterID id="FunctionArgument_15"/>
+                                    </call>
+                                    <call functionName="IncrementVar">
+                                    <variableID
+                                    external="false" id="BodyVariableClass_4"/>
+                                    <call functionName="-Unary">
+                                    <call functionName="GetVariable">
+
+                                    <variableID id="BodyVariableClass_16"/>
+                                    </call>
+                                    </call>
+                                    </call>
+                                    </call>
+                                    <call functionName="Block">
+                                    <call functionName="SetVariable">
+                                    <variableID
+                                    external="false" id="BodyVariableClass_4"/>
+                                    <double value="-1000.0"/>
+                                    </call>
+                                    <call functionName="Noop"/>
+                                    </call>
+                                    </call>
+                                    <call functionName="Noop"/>
+                                    </call>
+                                    </functionCall>
+                                    <parameter name="enemy" id="FunctionArgument_15">
+                                    <simObjectType/>
+                                    </parameter>
+                                </parametricFunction>
+                                <call functionName="GetVariable">
+                                    <variableID writeable="false" id="BodyVariableClass_13"/>
+                                </call>
+                            </call>
+                        </action>
+                    </actionRule>
+                    <stayTime>
+                        <double value="1.0"/>
+                    </stayTime>
+                </actionActivity>
+                <chainRule toActivityID="ActionActivityGraphLeaf_4"
+                    name="Enemy close" fromActivityID="ActionActivityGraphLeaf_3">
+                    <precondition>
+                        <call functionName="Not">
+                            <call functionName="IsEmpty">
+                                <call functionName="Select">
+                                    <parametricFunction>
+                                    <functionCall>
+                                    <call functionName="And">
+                                    <call functionName="InstanceOf">
+                                    <parameterID id="FunctionArgument_16"/>
+                                    <objectClassID id="ActivityAgentClass_0"/>
+                                    </call>
+                                    <call functionName="Not">
+                                    <call functionName="IsDead">
+                                    <parameterID id="FunctionArgument_16"/>
+                                    </call>
+                                    </call>
+                                    <call functionName="Not">
+                                    <call functionName="Equal">
+                                    <call functionName="GetVariable">
+                                    <variableID
+                                    external="false"
+                                    writeable="false" id="BodyVariableClass_9">
+                                    <simObjectType/>
+                                    </variableID>
+                                    </call>
+                                    <call functionName="GetVariableFrom">
+                                    <variableID
+                                    writeable="false" id="BodyVariableClass_9">
+                                    <simObjectType/>
+                                    </variableID>
+                                    <parameterID id="FunctionArgument_16"/>
+                                    </call>
+                                    </call>
+                                    </call>
+                                    </call>
+                                    </functionCall>
+                                    <parameter name="obj" id="FunctionArgument_16">
+                                    <simObjectType/>
+                                    </parameter>
+                                    </parametricFunction>
+                                    <call functionName="ObserveObjectsOnPosition">
+                                    <call functionName="GetMyPosition"/>
+                                    <call functionName="GetVariable">
+                                    <variableID id="BodyVariableClass_3"/>
+                                    </call>
+                                    <boolean value="false"/>
+                                    <boolean value="false"/>
+                                    </call>
+                                </call>
+                            </call>
+                        </call>
+                    </precondition>
+                </chainRule>
+                <chainRule toActivityID="ActionActivityGraphLeaf_3" fromActivityID="ActionActivityGraphLeaf_4">
+                    <controlPoint x="414" y="308"/>
                     <precondition>
                         <boolean value="true"/>
                     </precondition>
                 </chainRule>
-                <otherwiseChainRule
-                    toActivityID="ActionActivityGraphLeaf_2" fromDecisionActivityID="ActionActivityGraphLeaf_3"/>
-                <emergencyRule toActivityID="ExitActivityGraphLeaf_0">
+                <chainRule toActivityID="ActionActivityGraphLeaf_3" fromActivityID="EntryActivityGraphLeaf_1">
                     <precondition>
-                        <call functionName="&lt;">
-                            <call functionName="GetVariable">
-                                <variableID external="false"
-                                    writeable="false" id="BodyVariableClass_3"/>
-                            </call>
-                            <double value="0.0"/>
-                        </call>
+                        <boolean value="true"/>
                     </precondition>
-                </emergencyRule>
+                </chainRule>
             </composedActivity>
         </reasoning>
     </agentClass>
@@ -764,8 +1451,8 @@
             </features>
         </features>
         <bodyClass>
-            <bodyVariableClass id="BodyVariableClass_12">
-                <variableClass name="Tax" id="VariableClass_12"
+            <bodyVariableClass id="BodyVariableClass_17">
+                <variableClass name="Tax" id="VariableClass_17"
                     writeable="false" external="true" partOfName="false"
                     configValue="true" analysisValue="true">
                     <doubleType/>
@@ -774,8 +1461,8 @@
                     </defaultValue>
                 </variableClass>
             </bodyVariableClass>
-            <bodyVariableClass id="BodyVariableClass_13">
-                <variableClass name="Goo" id="VariableClass_13"
+            <bodyVariableClass id="BodyVariableClass_18">
+                <variableClass name="Goo" id="VariableClass_18"
                     writeable="true" external="true" partOfName="false"
                     configValue="true" analysisValue="true">
                     <doubleType/>
@@ -784,9 +1471,9 @@
                     </defaultValue>
                 </variableClass>
             </bodyVariableClass>
-            <bodyVariableClass id="BodyVariableClass_14">
+            <bodyVariableClass id="BodyVariableClass_19">
                 <variableClass name="ExpansionCost"
-                    id="VariableClass_14" writeable="false"
+                    id="VariableClass_19" writeable="false"
                     external="true" partOfName="false"
                     configValue="true" analysisValue="true">
                     <doubleType/>
@@ -795,9 +1482,9 @@
                     </defaultValue>
                 </variableClass>
             </bodyVariableClass>
-            <bodyVariableClass id="BodyVariableClass_15">
+            <bodyVariableClass id="BodyVariableClass_20">
                 <variableClass name="StartingBudget"
-                    id="VariableClass_15" writeable="true"
+                    id="VariableClass_20" writeable="true"
                     external="false" partOfName="false"
                     configValue="true" analysisValue="true">
                     <doubleType/>
@@ -809,32 +1496,31 @@
         </bodyClass>
         <interactionelements/>
         <reasoning>
-            <composedActivity name="Expansion" id="ActivityGraph_1">
+            <composedActivity name="Expansion" id="ActivityGraph_2">
                 <entryActivity name="Entry Activity"
-                    id="EntryActivityGraphLeaf_1" x="96" y="202"
+                    id="EntryActivityGraphLeaf_2" x="96" y="202"
                     width="15" height="15"/>
                 <exitActivity name="Exit Activity"
-                    id="ExitActivityGraphLeaf_1" x="242" y="145"
+                    id="ExitActivityGraphLeaf_2" x="242" y="145"
                     width="15" height="15"/>
                 <emergencyActivity name="Emergency Activity"
-                    id="EmergencyActivityGraphLeaf_1" x="160" y="318"
+                    id="EmergencyActivityGraphLeaf_2" x="160" y="318"
                     width="130" height="50"/>
                 <actionActivity name="Idle"
-                    id="ActionActivityGraphLeaf_4" x="303" y="135"
+                    id="ActionActivityGraphLeaf_5" x="303" y="135"
                     width="90" height="70" type="state like">
                     <stayTime>
                         <double value="1.0"/>
                     </stayTime>
                 </actionActivity>
                 <actionActivity name="Spawn Miner"
-                    id="ActionActivityGraphLeaf_5" x="589" y="149"
+                    id="ActionActivityGraphLeaf_6" x="589" y="149"
                     width="211" height="70">
                     <actionRule>
                         <action>
                             <call functionName="CreateObjectAndRemember">
                                 <objectInstance
                                     id="ActivityAgentInstance_0" objectClassID="ActivityAgentClass_0">
-                                    <bodyVariableInstance bodyVariableClassID="BodyVariableClass_2"/>
                                     <bodyVariableInstance bodyVariableClassID="BodyVariableClass_3"/>
                                     <bodyVariableInstance bodyVariableClassID="BodyVariableClass_4"/>
                                     <bodyVariableInstance bodyVariableClassID="BodyVariableClass_5"/>
@@ -844,6 +1530,11 @@
                                     <bodyVariableInstance bodyVariableClassID="BodyVariableClass_9"/>
                                     <bodyVariableInstance bodyVariableClassID="BodyVariableClass_10"/>
                                     <bodyVariableInstance bodyVariableClassID="BodyVariableClass_11"/>
+                                    <bodyVariableInstance bodyVariableClassID="BodyVariableClass_12"/>
+                                    <bodyVariableInstance bodyVariableClassID="BodyVariableClass_13"/>
+                                    <bodyVariableInstance bodyVariableClassID="BodyVariableClass_14"/>
+                                    <bodyVariableInstance bodyVariableClassID="BodyVariableClass_15"/>
+                                    <bodyVariableInstance bodyVariableClassID="BodyVariableClass_16"/>
                                     <featureInstance
                                     featureObjectClassID="SpatialInfoObjectFeatureClass_1"
                                     xsi:type="XMLSpatialInfoFeatureInstance" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -866,29 +1557,29 @@
                                     <functionCall>
                                     <call functionName="Block">
                                     <call functionName="SetVariableOf">
-                                    <variableID id="BodyVariableClass_8">
+                                    <variableID id="BodyVariableClass_9">
                                     <simObjectType/>
                                     </variableID>
                                     <call functionName="GetCurrentSimObject"/>
-                                    <parameterID id="FunctionArgument_8"/>
+                                    <parameterID id="FunctionArgument_17"/>
                                     </call>
                                     <call functionName="SetVariableOf">
-                                    <variableID id="BodyVariableClass_3"/>
+                                    <variableID id="BodyVariableClass_4"/>
                                     <call functionName="GetVariable">
                                     <variableID
-                                    writeable="false" id="BodyVariableClass_15"/>
+                                    writeable="false" id="BodyVariableClass_20"/>
                                     </call>
-                                    <parameterID id="FunctionArgument_8"/>
+                                    <parameterID id="FunctionArgument_17"/>
                                     </call>
                                     <call functionName="BeamTo">
                                     <call functionName="GetSpatialInfo">
-                                    <parameterID id="FunctionArgument_8"/>
+                                    <parameterID id="FunctionArgument_17"/>
                                     </call>
                                     <call functionName="GetMyPosition"/>
                                     </call>
                                     <call functionName="SetShape">
                                     <call functionName="GetSpatialInfo">
-                                    <parameterID id="FunctionArgument_8"/>
+                                    <parameterID id="FunctionArgument_17"/>
                                     </call>
                                     <figure direction="0.0"
                                     radius="5.0"
@@ -900,7 +1591,7 @@
                                     </call>
                                     <call functionName="ChangeShapeColor">
                                     <call functionName="GetSpatialInfo">
-                                    <parameterID id="FunctionArgument_8"/>
+                                    <parameterID id="FunctionArgument_17"/>
                                     </call>
                                     <call functionName="GetColor">
                                     <call functionName="GetMySpatialInfo"/>
@@ -908,7 +1599,7 @@
                                     </call>
                                     </call>
                                     </functionCall>
-                                    <parameter name="miner" id="FunctionArgument_8">
+                                    <parameter name="miner" id="FunctionArgument_17">
                                     <simObjectType/>
                                     </parameter>
                                 </parametricFunction>
@@ -918,15 +1609,15 @@
                     <actionRule>
                         <action>
                             <call functionName="IncrementVar">
-                                <variableID external="false" id="BodyVariableClass_13"/>
+                                <variableID external="false" id="BodyVariableClass_18"/>
                                 <call functionName="-Unary">
                                     <call functionName="+">
                                     <call functionName="GetVariable">
-                                    <variableID external="false" id="BodyVariableClass_14"/>
+                                    <variableID external="false" id="BodyVariableClass_19"/>
                                     </call>
                                     <call functionName="GetVariable">
                                     <variableID
-                                    writeable="false" id="BodyVariableClass_15"/>
+                                    writeable="false" id="BodyVariableClass_20"/>
                                     </call>
                                     </call>
                                 </call>
@@ -937,13 +1628,13 @@
                         <double value="1.0"/>
                     </stayTime>
                 </actionActivity>
-                <chainRule toActivityID="ActionActivityGraphLeaf_4" fromActivityID="EntryActivityGraphLeaf_1">
+                <chainRule toActivityID="ActionActivityGraphLeaf_5" fromActivityID="EntryActivityGraphLeaf_2">
                     <precondition>
                         <boolean value="true"/>
                     </precondition>
                 </chainRule>
-                <chainRule toActivityID="ActionActivityGraphLeaf_5"
-                    name="Moons available? Enough goo?" fromActivityID="ActionActivityGraphLeaf_4">
+                <chainRule toActivityID="ActionActivityGraphLeaf_6"
+                    name="Moons available? Enough goo?" fromActivityID="ActionActivityGraphLeaf_5">
                     <precondition>
                         <call functionName="And">
                             <call functionName="&lt;">
@@ -955,14 +1646,14 @@
                                     <call functionName="GetCurrentSimObject"/>
                                     <call functionName="GetVariableFrom">
                                     <variableID
-                                    writeable="false" id="BodyVariableClass_8">
+                                    writeable="false" id="BodyVariableClass_9">
                                     <simObjectType/>
                                     </variableID>
-                                    <parameterID id="FunctionArgument_9"/>
+                                    <parameterID id="FunctionArgument_18"/>
                                     </call>
                                     </call>
                                     </functionCall>
-                                    <parameter name="miner" id="FunctionArgument_9">
+                                    <parameter name="miner" id="FunctionArgument_18">
                                     <simObjectType/>
                                     </parameter>
                                     </parametricFunction>
@@ -984,21 +1675,21 @@
                             <call functionName="&lt;">
                                 <call functionName="+">
                                     <call functionName="GetVariable">
-                                    <variableID external="false" id="BodyVariableClass_14"/>
+                                    <variableID external="false" id="BodyVariableClass_19"/>
                                     </call>
                                     <call functionName="GetVariable">
-                                    <variableID writeable="false" id="BodyVariableClass_15"/>
+                                    <variableID writeable="false" id="BodyVariableClass_20"/>
                                     </call>
                                 </call>
                                 <call functionName="GetVariable">
                                     <variableID external="false"
-                                    writeable="false" id="BodyVariableClass_13"/>
+                                    writeable="false" id="BodyVariableClass_18"/>
                                 </call>
                             </call>
                         </call>
                     </precondition>
                 </chainRule>
-                <chainRule toActivityID="ActionActivityGraphLeaf_4" fromActivityID="ActionActivityGraphLeaf_5">
+                <chainRule toActivityID="ActionActivityGraphLeaf_5" fromActivityID="ActionActivityGraphLeaf_6">
                     <controlPoint x="488" y="227"/>
                     <precondition>
                         <boolean value="true"/>
@@ -1007,7 +1698,7 @@
             </composedActivity>
         </reasoning>
     </agentClass>
-    <worldClass name="NewEden" id="ActivityWorldClass_0" updateBeforeAllObjects="false">
+    <worldClass name="NewEden" id="ActivityWorldClass_0" updateBeforeAllObjects="true">
         <features>
             <buildin>Standard Functions</buildin>
             <buildin>Standard Object Functions</buildin>
@@ -1015,8 +1706,8 @@
                 xsi:type="XMLSpatialMapFeature" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
         </features>
         <bodyClass>
-            <bodyVariableClass id="BodyVariableClass_16">
-                <variableClass name="NMoons" id="VariableClass_16"
+            <bodyVariableClass id="BodyVariableClass_21">
+                <variableClass name="NMoons" id="VariableClass_21"
                     writeable="false" external="false"
                     partOfName="false" configValue="true" analysisValue="true">
                     <doubleType/>
@@ -1028,25 +1719,63 @@
         </bodyClass>
         <interactionelements/>
         <reasoning>
-            <composedActivity name="Reasoning" id="ActivityGraph_2">
+            <composedActivity name="Reasoning" id="ActivityGraph_3">
                 <entryActivity name="Entry Activity"
-                    id="EntryActivityGraphLeaf_2" x="248" y="149"
+                    id="EntryActivityGraphLeaf_3" x="248" y="149"
                     width="15" height="15"/>
                 <exitActivity name="Exit Activity"
-                    id="ExitActivityGraphLeaf_2" x="14" y="148"
+                    id="ExitActivityGraphLeaf_3" x="14" y="148"
                     width="15" height="15"/>
                 <emergencyActivity name="Emergency Activity"
-                    id="EmergencyActivityGraphLeaf_2" x="359" y="137"
+                    id="EmergencyActivityGraphLeaf_3" x="359" y="137"
                     width="130" height="50"/>
-                <actionActivity name="Idle"
-                    id="ActionActivityGraphLeaf_6" x="64" y="114"
+                <actionActivity name="Check Miners"
+                    id="ActionActivityGraphLeaf_7" x="64" y="114"
                     width="90" height="70" type="state like">
+                    <actionRule>
+                        <action>
+                            <call functionName="ForElements">
+                                <parametricFunction>
+                                    <functionCall>
+                                    <call userFunctionID="UserFunction_6">
+                                    <parameterID id="FunctionArgument_19"/>
+                                    </call>
+                                    </functionCall>
+                                    <parameter name="miner" id="FunctionArgument_19">
+                                    <simObjectType/>
+                                    </parameter>
+                                </parametricFunction>
+                                <call functionName="Select">
+                                    <parametricFunction>
+                                    <functionCall>
+                                    <call functionName="&lt;">
+                                    <call functionName="GetVariableFrom">
+                                    <variableID
+                                    writeable="false" id="BodyVariableClass_4"/>
+                                    <parameterID id="FunctionArgument_20"/>
+                                    </call>
+                                    <double value="0.0"/>
+                                    </call>
+                                    </functionCall>
+                                    <parameter name="miner" id="FunctionArgument_20">
+                                    <simObjectType/>
+                                    </parameter>
+                                    </parametricFunction>
+                                    <call functionName="GetAllObjectsOfType">
+                                    <objectClassID id="ActivityAgentClass_0"/>
+                                    <boolean value="true"/>
+                                    <boolean value="true"/>
+                                    </call>
+                                </call>
+                            </call>
+                        </action>
+                    </actionRule>
                     <stayTime>
                         <double value="1.0"/>
                     </stayTime>
                 </actionActivity>
                 <actionActivity name="SpawnMoons"
-                    id="ActionActivityGraphLeaf_7" x="249" y="314"
+                    id="ActionActivityGraphLeaf_8" x="249" y="314"
                     width="90" height="70">
                     <actionRule>
                         <action>
@@ -1058,6 +1787,7 @@
                                     id="ResourceInstance_0" objectClassID="ResourceClass_0">
                                     <bodyVariableInstance bodyVariableClassID="BodyVariableClass_0"/>
                                     <bodyVariableInstance bodyVariableClassID="BodyVariableClass_1"/>
+                                    <bodyVariableInstance bodyVariableClassID="BodyVariableClass_2"/>
                                     <featureInstance
                                     featureObjectClassID="SpatialInfoObjectFeatureClass_0"
                                     xsi:type="XMLSpatialInfoFeatureInstance" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -1088,7 +1818,7 @@
                                     <functionCall>
                                     <call functionName="BeamTo">
                                     <call functionName="GetSpatialInfo">
-                                    <parameterID id="FunctionArgument_11"/>
+                                    <parameterID id="FunctionArgument_22"/>
                                     </call>
                                     <call functionName="CreatePos">
                                     <call functionName="RandomDouble">
@@ -1109,13 +1839,13 @@
                                     </call>
                                     </functionCall>
                                     <parameter
-                                    name="newMoon" id="FunctionArgument_11">
+                                    name="newMoon" id="FunctionArgument_22">
                                     <simObjectType/>
                                     </parameter>
                                     </parametricFunction>
                                     </call>
                                     </functionCall>
-                                    <parameter name="Untitled" id="FunctionArgument_10">
+                                    <parameter name="Untitled" id="FunctionArgument_21">
                                     <doubleType/>
                                     </parameter>
                                 </parametricFunction>
@@ -1127,7 +1857,7 @@
                                     </call>
                                 </call>
                                 <call functionName="GetVariable">
-                                    <variableID id="BodyVariableClass_16"/>
+                                    <variableID id="BodyVariableClass_21"/>
                                 </call>
                             </call>
                         </action>
@@ -1136,12 +1866,12 @@
                         <double value="1.0"/>
                     </stayTime>
                 </actionActivity>
-                <chainRule toActivityID="ActionActivityGraphLeaf_6" fromActivityID="EntryActivityGraphLeaf_2">
+                <chainRule toActivityID="ActionActivityGraphLeaf_7" fromActivityID="EntryActivityGraphLeaf_3">
                     <precondition>
                         <boolean value="true"/>
                     </precondition>
                 </chainRule>
-                <chainRule toActivityID="ActionActivityGraphLeaf_7" fromActivityID="ActionActivityGraphLeaf_6">
+                <chainRule toActivityID="ActionActivityGraphLeaf_8" fromActivityID="ActionActivityGraphLeaf_7">
                     <precondition>
                         <call functionName="&lt;">
                             <call functionName="Count">
@@ -1152,12 +1882,12 @@
                                 </call>
                             </call>
                             <call functionName="GetVariable">
-                                <variableID id="BodyVariableClass_16"/>
+                                <variableID id="BodyVariableClass_21"/>
                             </call>
                         </call>
                     </precondition>
                 </chainRule>
-                <chainRule toActivityID="ActionActivityGraphLeaf_6" fromActivityID="ActionActivityGraphLeaf_7">
+                <chainRule toActivityID="ActionActivityGraphLeaf_7" fromActivityID="ActionActivityGraphLeaf_8">
                     <controlPoint x="150" y="343"/>
                     <precondition>
                         <boolean value="true"/>
@@ -1168,7 +1898,7 @@
     </worldClass>
     <situation name="2 MIners" id="Situation_0">
         <worldInstance id="ActivityWorldInstance_0" objectClassID="ActivityWorldClass_0">
-            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_16"/>
+            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_21"/>
             <featureInstance
                 featureObjectClassID="SpatialMapFeatureClass_0"
                 torus="false" drawGrid="true" discrete="false"
@@ -1181,7 +1911,6 @@
             </featureInstance>
         </worldInstance>
         <objectInstance id="ActivityAgentInstance_1" objectClassID="ActivityAgentClass_0">
-            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_2"/>
             <bodyVariableInstance bodyVariableClassID="BodyVariableClass_3"/>
             <bodyVariableInstance bodyVariableClassID="BodyVariableClass_4"/>
             <bodyVariableInstance bodyVariableClassID="BodyVariableClass_5"/>
@@ -1191,6 +1920,11 @@
             <bodyVariableInstance bodyVariableClassID="BodyVariableClass_9"/>
             <bodyVariableInstance bodyVariableClassID="BodyVariableClass_10"/>
             <bodyVariableInstance bodyVariableClassID="BodyVariableClass_11"/>
+            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_12"/>
+            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_13"/>
+            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_14"/>
+            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_15"/>
+            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_16"/>
             <featureInstance
                 featureObjectClassID="SpatialInfoObjectFeatureClass_1"
                 xsi:type="XMLSpatialInfoFeatureInstance" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -1206,7 +1940,6 @@
             </featureInstance>
         </objectInstance>
         <objectInstance id="ActivityAgentInstance_2" objectClassID="ActivityAgentClass_0">
-            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_2"/>
             <bodyVariableInstance bodyVariableClassID="BodyVariableClass_3"/>
             <bodyVariableInstance bodyVariableClassID="BodyVariableClass_4"/>
             <bodyVariableInstance bodyVariableClassID="BodyVariableClass_5"/>
@@ -1216,6 +1949,11 @@
             <bodyVariableInstance bodyVariableClassID="BodyVariableClass_9"/>
             <bodyVariableInstance bodyVariableClassID="BodyVariableClass_10"/>
             <bodyVariableInstance bodyVariableClassID="BodyVariableClass_11"/>
+            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_12"/>
+            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_13"/>
+            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_14"/>
+            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_15"/>
+            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_16"/>
             <featureInstance
                 featureObjectClassID="SpatialInfoObjectFeatureClass_1"
                 xsi:type="XMLSpatialInfoFeatureInstance" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -1233,7 +1971,7 @@
     </situation>
     <situation name="2 Alliances" id="Situation_1">
         <worldInstance id="ActivityWorldInstance_1" objectClassID="ActivityWorldClass_0">
-            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_16"/>
+            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_21"/>
             <featureInstance
                 featureObjectClassID="SpatialMapFeatureClass_0"
                 torus="false" drawGrid="true" discrete="false"
@@ -1246,10 +1984,10 @@
             </featureInstance>
         </worldInstance>
         <objectInstance name="A1" id="ActivityAgentInstance_3" objectClassID="ActivityAgentClass_1">
-            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_12"/>
-            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_13"/>
-            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_14"/>
-            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_15"/>
+            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_17"/>
+            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_18"/>
+            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_19"/>
+            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_20"/>
             <featureInstance
                 featureObjectClassID="SpatialInfoObjectFeatureClass_2"
                 xsi:type="XMLSpatialInfoFeatureInstance" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -1265,10 +2003,10 @@
             </featureInstance>
         </objectInstance>
         <objectInstance name="A2" id="ActivityAgentInstance_4" objectClassID="ActivityAgentClass_1">
-            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_12"/>
-            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_13"/>
-            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_14"/>
-            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_15"/>
+            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_17"/>
+            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_18"/>
+            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_19"/>
+            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_20"/>
             <featureInstance
                 featureObjectClassID="SpatialInfoObjectFeatureClass_2"
                 xsi:type="XMLSpatialInfoFeatureInstance" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -1297,7 +2035,69 @@
             <doubleType/>
         </item>
     </analysis>
+    <analysis name="Miners per Moon" id="Analysis_1" xAxisName=""
+        yAxisName="" deltaTicks="1" default="false" type="Series" windowSize="100">
+        <item name="MeanMiners" colorRed="13" colorGreen="95" colorBlue="51">
+            <call functionName="Mean">
+                <call functionName="Map">
+                    <parametricFunction>
+                        <functionCall>
+                            <call functionName="GetVariableFrom">
+                                <variableID writeable="false" id="BodyVariableClass_2"/>
+                                <parameterID id="FunctionArgument_23"/>
+                            </call>
+                        </functionCall>
+                        <parameter name="moon" id="FunctionArgument_23">
+                            <simObjectType/>
+                        </parameter>
+                    </parametricFunction>
+                    <call functionName="GetAllObjectsOfType">
+                        <objectClassID id="ResourceClass_0"/>
+                        <boolean value="true"/>
+                        <boolean value="true"/>
+                    </call>
+                </call>
+            </call>
+        </item>
+        <item name="MaxMiners" colorRed="250" colorGreen="1" colorBlue="35">
+            <call functionName="Maximize">
+                <parametricFunction>
+                    <functionCall>
+                        <call functionName="Max">
+                            <parameterID id="FunctionArgument_24"/>
+                            <parameterID id="FunctionArgument_25"/>
+                        </call>
+                    </functionCall>
+                    <parameter name="a1" id="FunctionArgument_24">
+                        <doubleType/>
+                    </parameter>
+                    <parameter name="a2" id="FunctionArgument_25">
+                        <doubleType/>
+                    </parameter>
+                </parametricFunction>
+                <call functionName="Map">
+                    <parametricFunction>
+                        <functionCall>
+                            <call functionName="GetVariableFrom">
+                                <variableID writeable="false" id="BodyVariableClass_2"/>
+                                <parameterID id="FunctionArgument_26"/>
+                            </call>
+                        </functionCall>
+                        <parameter name="moon" id="FunctionArgument_26">
+                            <simObjectType/>
+                        </parameter>
+                    </parametricFunction>
+                    <call functionName="GetAllObjectsOfType">
+                        <objectClassID id="ResourceClass_0"/>
+                        <boolean value="true"/>
+                        <boolean value="true"/>
+                    </call>
+                </call>
+            </call>
+        </item>
+    </analysis>
     <simulation id="Simulation_0" startSituationID="Situation_1" test="false">
         <analysis id="Analysis_0"/>
+        <analysis id="Analysis_1"/>
     </simulation>
 </XMLSeSAmModel>
