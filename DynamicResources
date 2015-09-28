@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<XMLSeSAmModel lastRunExperiment="Simulation_0" version="0.2"
+<XMLSeSAmModel lastRunExperiment="Simulation_1" version="0.2"
     build="2536" globalAssert="true" compileDebugFunction="true"
     runDebugFunction="true" optimize="true" inline="true"
     closures="false" xmlns="http://www.simsesam.de/schemas/model">
@@ -433,6 +433,203 @@
             <simObjectType/>
         </parameter>
         <voidType/>
+    </userFunction>
+    <userFunction todoFlag="true" name="CountMoonsPerAlliance0"
+        id="UserFunction_8"
+        documentation="Extracted from de.uniwue.ki.mas.basics.functionCall.FunctionCallDeclaration@256849381 [Count(Select('[miner] And(NotIsNullFocus(GetVariableFrom(MoonFocus, miner)), Equal(GetVariableFrom(Alliance, miner), GetNth(0, GetAllObjectsOfType(Alliance, true, true))))', GetAllObjectsOfType(MoonMiner, true, true)))]"
+        external="true" expert="false" inline="true">
+        <functionCall>
+            <call functionName="Count">
+                <call functionName="Select">
+                    <parametricFunction>
+                        <functionCall>
+                            <call functionName="And">
+                                <call userFunctionID="UserFunction_2">
+                                    <call functionName="GetVariableFrom">
+                                    <variableID writeable="false" id="BodyVariableClass_5">
+                                    <objectType/>
+                                    </variableID>
+                                    <parameterID id="FunctionArgument_12"/>
+                                    </call>
+                                </call>
+                                <call functionName="Equal">
+                                    <call functionName="GetObjectName">
+                                    <call functionName="GetVariableFrom">
+                                    <variableID
+                                    writeable="false" id="BodyVariableClass_9">
+                                    <simObjectType/>
+                                    </variableID>
+                                    <parameterID id="FunctionArgument_12"/>
+                                    </call>
+                                    </call>
+                                    <string value="A1"/>
+                                </call>
+                            </call>
+                        </functionCall>
+                        <parameter name="miner" id="FunctionArgument_12">
+                            <simObjectType/>
+                        </parameter>
+                    </parametricFunction>
+                    <call functionName="GetAllObjectsOfType">
+                        <objectClassID id="ActivityAgentClass_0"/>
+                        <boolean value="true"/>
+                        <boolean value="true"/>
+                    </call>
+                </call>
+            </call>
+        </functionCall>
+        <integerType/>
+    </userFunction>
+    <userFunction name="CountMoonsPerAlliance1" id="UserFunction_9"
+        documentation="Extracted from de.uniwue.ki.mas.basics.functionCall.FunctionCallDeclaration@256849381 [Count(Select('[miner] And(NotIsNullFocus(GetVariableFrom(MoonFocus, miner)), Equal(GetVariableFrom(Alliance, miner), GetNth(0, GetAllObjectsOfType(Alliance, true, true))))', GetAllObjectsOfType(MoonMiner, true, true)))]"
+        external="true" expert="false" inline="true">
+        <functionCall>
+            <call functionName="Count">
+                <call functionName="Select">
+                    <parametricFunction>
+                        <functionCall>
+                            <call functionName="And">
+                                <call userFunctionID="UserFunction_2">
+                                    <call functionName="GetVariableFrom">
+                                    <variableID writeable="false" id="BodyVariableClass_5">
+                                    <objectType/>
+                                    </variableID>
+                                    <parameterID id="FunctionArgument_13"/>
+                                    </call>
+                                </call>
+                                <call functionName="Equal">
+                                    <call functionName="GetVariableFrom">
+                                    <variableID writeable="false" id="BodyVariableClass_9">
+                                    <objectType/>
+                                    </variableID>
+                                    <parameterID id="FunctionArgument_13"/>
+                                    </call>
+                                    <call functionName="GetNth">
+                                    <double value="1.0"/>
+                                    <call functionName="GetAllObjectsOfType">
+                                    <objectClassID id="ActivityAgentClass_1"/>
+                                    <boolean value="true"/>
+                                    <boolean value="true"/>
+                                    </call>
+                                    </call>
+                                </call>
+                            </call>
+                        </functionCall>
+                        <parameter name="miner" id="FunctionArgument_13">
+                            <simObjectType/>
+                        </parameter>
+                    </parametricFunction>
+                    <call functionName="GetAllObjectsOfType">
+                        <objectClassID id="ActivityAgentClass_0"/>
+                        <boolean value="true"/>
+                        <boolean value="true"/>
+                    </call>
+                </call>
+            </call>
+        </functionCall>
+        <integerType/>
+    </userFunction>
+    <userFunction
+        name="Copy of CountMoonsPerAlliance0 [9/28/15 12:58 PM]"
+        id="UserFunction_10"
+        documentation="Extracted from de.uniwue.ki.mas.basics.functionCall.FunctionCallDeclaration@256849381 [Count(Select('[miner] And(NotIsNullFocus(GetVariableFrom(MoonFocus, miner)), Equal(GetVariableFrom(Alliance, miner), GetNth(0, GetAllObjectsOfType(Alliance, true, true))))', GetAllObjectsOfType(MoonMiner, true, true)))]"
+        external="true" expert="false" inline="true">
+        <functionCall>
+            <call functionName="Count">
+                <call functionName="Select">
+                    <parametricFunction>
+                        <functionCall>
+                            <call functionName="And">
+                                <call userFunctionID="UserFunction_2">
+                                    <call functionName="GetVariableFrom">
+                                    <variableID writeable="false" id="BodyVariableClass_5">
+                                    <objectType/>
+                                    </variableID>
+                                    <parameterID id="FunctionArgument_14"/>
+                                    </call>
+                                </call>
+                                <call functionName="Equal">
+                                    <call functionName="GetVariableFrom">
+                                    <variableID writeable="false" id="BodyVariableClass_9">
+                                    <objectType/>
+                                    </variableID>
+                                    <parameterID id="FunctionArgument_14"/>
+                                    </call>
+                                    <call functionName="GetNth">
+                                    <double value="0.0"/>
+                                    <call functionName="GetAllObjectsOfType">
+                                    <objectClassID id="ActivityAgentClass_1"/>
+                                    <boolean value="true"/>
+                                    <boolean value="true"/>
+                                    </call>
+                                    </call>
+                                </call>
+                            </call>
+                        </functionCall>
+                        <parameter name="miner" id="FunctionArgument_14">
+                            <simObjectType/>
+                        </parameter>
+                    </parametricFunction>
+                    <call functionName="GetAllObjectsOfType">
+                        <objectClassID id="ActivityAgentClass_0"/>
+                        <boolean value="true"/>
+                        <boolean value="true"/>
+                    </call>
+                </call>
+            </call>
+        </functionCall>
+        <parameter name="ID" id="FunctionArgument_10">
+            <stringType/>
+        </parameter>
+        <integerType/>
+    </userFunction>
+    <userFunction name="CountMoonsByOwner" id="UserFunction_11"
+        documentation="Extracted from de.uniwue.ki.mas.basics.functionCall.FunctionCallDeclaration@256849381 [Count(Select('[miner] And(NotIsNullFocus(GetVariableFrom(MoonFocus, miner)), Equal(GetVariableFrom(Alliance, miner), GetNth(0, GetAllObjectsOfType(Alliance, true, true))))', GetAllObjectsOfType(MoonMiner, true, true)))]"
+        external="true" expert="false" inline="true">
+        <functionCall>
+            <call functionName="Count">
+                <call functionName="Select">
+                    <parametricFunction>
+                        <functionCall>
+                            <call functionName="And">
+                                <call userFunctionID="UserFunction_2">
+                                    <call functionName="GetVariableFrom">
+                                    <variableID writeable="false" id="BodyVariableClass_5">
+                                    <objectType/>
+                                    </variableID>
+                                    <parameterID id="FunctionArgument_15"/>
+                                    </call>
+                                </call>
+                                <call functionName="Equal">
+                                    <call functionName="GetObjectName">
+                                    <call functionName="GetVariableFrom">
+                                    <variableID
+                                    writeable="false" id="BodyVariableClass_9">
+                                    <simObjectType/>
+                                    </variableID>
+                                    <parameterID id="FunctionArgument_15"/>
+                                    </call>
+                                    </call>
+                                    <parameterID id="FunctionArgument_11"/>
+                                </call>
+                            </call>
+                        </functionCall>
+                        <parameter name="miner" id="FunctionArgument_15">
+                            <simObjectType/>
+                        </parameter>
+                    </parametricFunction>
+                    <call functionName="GetAllObjectsOfType">
+                        <objectClassID id="ActivityAgentClass_0"/>
+                        <boolean value="true"/>
+                        <boolean value="true"/>
+                    </call>
+                </call>
+            </call>
+        </functionCall>
+        <parameter name="Owner" id="FunctionArgument_11">
+            <stringType/>
+        </parameter>
+        <integerType/>
     </userFunction>
     <ressourceClass name="Moon" id="ResourceClass_0">
         <features>
@@ -894,13 +1091,13 @@
                                     <call functionName="Not">
                                     <call functionName="IsNull">
 
-                                    <parameterID id="FunctionArgument_10"/>
+                                    <parameterID id="FunctionArgument_16"/>
                                     </call>
                                     </call>
                                     <call functionName="Not">
                                     <call functionName="IsDead">
 
-                                    <parameterID id="FunctionArgument_10"/>
+                                    <parameterID id="FunctionArgument_16"/>
                                     </call>
                                     </call>
                                     <call functionName="Not">
@@ -909,12 +1106,12 @@
                                     <variableID
                                     writeable="false" id="BodyVariableClass_1"/>
 
-                                    <parameterID id="FunctionArgument_10"/>
+                                    <parameterID id="FunctionArgument_16"/>
                                     </call>
                                     </call>
                                     </call>
                                     </functionCall>
-                                    <parameter name="moon" id="FunctionArgument_10">
+                                    <parameter name="moon" id="FunctionArgument_16">
                                     <simObjectType/>
                                     </parameter>
                                     </parametricFunction>
@@ -933,14 +1130,14 @@
                                     <parametricFunction>
                                     <functionCall>
                                     <call userFunctionID="UserFunction_0">
-                                    <parameterID id="FunctionArgument_11"/>
-                                    <parameterID id="FunctionArgument_12"/>
+                                    <parameterID id="FunctionArgument_17"/>
+                                    <parameterID id="FunctionArgument_18"/>
                                     </call>
                                     </functionCall>
-                                    <parameter name="m1" id="FunctionArgument_11">
+                                    <parameter name="m1" id="FunctionArgument_17">
                                     <simObjectType/>
                                     </parameter>
-                                    <parameter name="m2" id="FunctionArgument_12">
+                                    <parameter name="m2" id="FunctionArgument_18">
                                     <simObjectType/>
                                     </parameter>
                                     </parametricFunction>
@@ -951,7 +1148,7 @@
                                     <call functionName="Not">
                                     <call functionName="IsDead">
 
-                                    <parameterID id="FunctionArgument_13"/>
+                                    <parameterID id="FunctionArgument_19"/>
                                     </call>
                                     </call>
                                     <call functionName="Not">
@@ -960,12 +1157,12 @@
                                     <variableID
                                     writeable="false" id="BodyVariableClass_1"/>
 
-                                    <parameterID id="FunctionArgument_13"/>
+                                    <parameterID id="FunctionArgument_19"/>
                                     </call>
                                     </call>
                                     </call>
                                     </functionCall>
-                                    <parameter name="moon" id="FunctionArgument_13">
+                                    <parameter name="moon" id="FunctionArgument_19">
                                     <simObjectType/>
                                     </parameter>
                                     </parametricFunction>
@@ -1266,12 +1463,12 @@
                                     <functionCall>
                                     <call functionName="And">
                                     <call functionName="InstanceOf">
-                                    <parameterID id="FunctionArgument_14"/>
+                                    <parameterID id="FunctionArgument_20"/>
                                     <objectClassID id="ActivityAgentClass_0"/>
                                     </call>
                                     <call functionName="Not">
                                     <call functionName="IsDead">
-                                    <parameterID id="FunctionArgument_14"/>
+                                    <parameterID id="FunctionArgument_20"/>
                                     </call>
                                     </call>
                                     <call functionName="Not">
@@ -1291,13 +1488,13 @@
                                     <simObjectType/>
                                     </variableID>
 
-                                    <parameterID id="FunctionArgument_14"/>
+                                    <parameterID id="FunctionArgument_20"/>
                                     </call>
                                     </call>
                                     </call>
                                     </call>
                                     </functionCall>
-                                    <parameter name="obj" id="FunctionArgument_14">
+                                    <parameter name="obj" id="FunctionArgument_20">
                                     <simObjectType/>
                                     </parameter>
                                     </parametricFunction>
@@ -1324,12 +1521,12 @@
                                     <functionCall>
                                     <call functionName="And">
                                     <call functionName="InstanceOf">
-                                    <parameterID id="FunctionArgument_15"/>
+                                    <parameterID id="FunctionArgument_21"/>
                                     <objectClassID id="ActivityAgentClass_0"/>
                                     </call>
                                     <call functionName="Not">
                                     <call functionName="IsDead">
-                                    <parameterID id="FunctionArgument_15"/>
+                                    <parameterID id="FunctionArgument_21"/>
                                     </call>
                                     </call>
                                     <call functionName="Equal">
@@ -1345,12 +1542,12 @@
                                     writeable="false" id="BodyVariableClass_9">
                                     <simObjectType/>
                                     </variableID>
-                                    <parameterID id="FunctionArgument_15"/>
+                                    <parameterID id="FunctionArgument_21"/>
                                     </call>
                                     </call>
                                     </call>
                                     </functionCall>
-                                    <parameter name="obj" id="FunctionArgument_15">
+                                    <parameter name="obj" id="FunctionArgument_21">
                                     <simObjectType/>
                                     </parameter>
                                     </parametricFunction>
@@ -1404,7 +1601,7 @@
                                     <call functionName="If Then Else">
                                     <call functionName="Not">
                                     <call functionName="IsDead">
-                                    <parameterID id="FunctionArgument_16"/>
+                                    <parameterID id="FunctionArgument_22"/>
                                     </call>
                                     </call>
                                     <call functionName="If Then Else">
@@ -1432,7 +1629,7 @@
                                     </call>
                                     <call functionName="Block">
                                     <call userFunctionID="UserFunction_7">
-                                    <parameterID id="FunctionArgument_16"/>
+                                    <parameterID id="FunctionArgument_22"/>
                                     </call>
                                     <call functionName="IncrementVar">
                                     <variableID
@@ -1450,7 +1647,7 @@
                                     <call functionName="Noop"/>
                                     </call>
                                     </functionCall>
-                                    <parameter name="enemy" id="FunctionArgument_16">
+                                    <parameter name="enemy" id="FunctionArgument_22">
                                     <simObjectType/>
                                     </parameter>
                                 </parametricFunction>
@@ -1474,12 +1671,12 @@
                                     <functionCall>
                                     <call functionName="And">
                                     <call functionName="InstanceOf">
-                                    <parameterID id="FunctionArgument_17"/>
+                                    <parameterID id="FunctionArgument_23"/>
                                     <objectClassID id="ActivityAgentClass_0"/>
                                     </call>
                                     <call functionName="Not">
                                     <call functionName="IsDead">
-                                    <parameterID id="FunctionArgument_17"/>
+                                    <parameterID id="FunctionArgument_23"/>
                                     </call>
                                     </call>
                                     <call functionName="Not">
@@ -1496,13 +1693,13 @@
                                     writeable="false" id="BodyVariableClass_9">
                                     <simObjectType/>
                                     </variableID>
-                                    <parameterID id="FunctionArgument_17"/>
+                                    <parameterID id="FunctionArgument_23"/>
                                     </call>
                                     </call>
                                     </call>
                                     </call>
                                     </functionCall>
-                                    <parameter name="obj" id="FunctionArgument_17">
+                                    <parameter name="obj" id="FunctionArgument_23">
                                     <simObjectType/>
                                     </parameter>
                                     </parametricFunction>
@@ -1662,7 +1859,7 @@
                                     <simObjectType/>
                                     </variableID>
                                     <call functionName="GetCurrentSimObject"/>
-                                    <parameterID id="FunctionArgument_18"/>
+                                    <parameterID id="FunctionArgument_24"/>
                                     </call>
                                     <call functionName="SetVariableOf">
                                     <variableID id="BodyVariableClass_4"/>
@@ -1670,17 +1867,17 @@
                                     <variableID
                                     writeable="false" id="BodyVariableClass_21"/>
                                     </call>
-                                    <parameterID id="FunctionArgument_18"/>
+                                    <parameterID id="FunctionArgument_24"/>
                                     </call>
                                     <call functionName="BeamTo">
                                     <call functionName="GetSpatialInfo">
-                                    <parameterID id="FunctionArgument_18"/>
+                                    <parameterID id="FunctionArgument_24"/>
                                     </call>
                                     <call functionName="GetMyPosition"/>
                                     </call>
                                     <call functionName="SetShape">
                                     <call functionName="GetSpatialInfo">
-                                    <parameterID id="FunctionArgument_18"/>
+                                    <parameterID id="FunctionArgument_24"/>
                                     </call>
                                     <figure direction="0.0"
                                     radius="5.0"
@@ -1692,7 +1889,7 @@
                                     </call>
                                     <call functionName="ChangeShapeColor">
                                     <call functionName="GetSpatialInfo">
-                                    <parameterID id="FunctionArgument_18"/>
+                                    <parameterID id="FunctionArgument_24"/>
                                     </call>
                                     <call functionName="GetColor">
                                     <call functionName="GetMySpatialInfo"/>
@@ -1700,7 +1897,7 @@
                                     </call>
                                     </call>
                                     </functionCall>
-                                    <parameter name="miner" id="FunctionArgument_18">
+                                    <parameter name="miner" id="FunctionArgument_24">
                                     <simObjectType/>
                                     </parameter>
                                 </parametricFunction>
@@ -1750,11 +1947,11 @@
                                     writeable="false" id="BodyVariableClass_9">
                                     <simObjectType/>
                                     </variableID>
-                                    <parameterID id="FunctionArgument_19"/>
+                                    <parameterID id="FunctionArgument_25"/>
                                     </call>
                                     </call>
                                     </functionCall>
-                                    <parameter name="miner" id="FunctionArgument_19">
+                                    <parameter name="miner" id="FunctionArgument_25">
                                     <simObjectType/>
                                     </parameter>
                                     </parametricFunction>
@@ -1881,7 +2078,7 @@
                                     <functionCall>
                                     <call functionName="BeamTo">
                                     <call functionName="GetSpatialInfo">
-                                    <parameterID id="FunctionArgument_21"/>
+                                    <parameterID id="FunctionArgument_27"/>
                                     </call>
                                     <call functionName="CreatePos">
                                     <call functionName="RandomDouble">
@@ -1902,13 +2099,13 @@
                                     </call>
                                     </functionCall>
                                     <parameter
-                                    name="newMoon" id="FunctionArgument_21">
+                                    name="newMoon" id="FunctionArgument_27">
                                     <simObjectType/>
                                     </parameter>
                                     </parametricFunction>
                                     </call>
                                     </functionCall>
-                                    <parameter name="Untitled" id="FunctionArgument_20">
+                                    <parameter name="Untitled" id="FunctionArgument_26">
                                     <doubleType/>
                                     </parameter>
                                 </parametricFunction>
@@ -2087,6 +2284,78 @@
             </featureInstance>
         </objectInstance>
     </situation>
+    <situation name="3 Alliances" id="Situation_2">
+        <worldInstance id="ActivityWorldInstance_2" objectClassID="ActivityWorldClass_0">
+            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_22"/>
+            <featureInstance
+                featureObjectClassID="SpatialMapFeatureClass_0"
+                torus="false" drawGrid="true" discrete="false"
+                rotateImages="true" centeredPos="true" tiled="false"
+                horizontalTiles="1" verticalTiles="1"
+                xsi:type="XMLSpatialMapFeatureInstance" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <mapSize width="200.0" height="200.0"/>
+                <gridCols value="20"/>
+                <gridRows value="20"/>
+            </featureInstance>
+        </worldInstance>
+        <objectInstance name="A1" id="ActivityAgentInstance_5" objectClassID="ActivityAgentClass_1">
+            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_18"/>
+            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_19"/>
+            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_20"/>
+            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_21"/>
+            <featureInstance
+                featureObjectClassID="SpatialInfoObjectFeatureClass_2"
+                xsi:type="XMLSpatialInfoFeatureInstance" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <spatialInfo speed="10.0" direction="0.0"
+                    drawPriority="3.0" imageStyle="2" shapeStyle="1"
+                    x="20.0" y="20.0">
+                    <figure direction="0.0" radius="5.0" xsi:type="XMLCircle">
+                        <balancePoint x="5.0" y="5.0"/>
+                        <position x="20.0" y="20.0"/>
+                    </figure>
+                    <shapeColor red="51" green="51" blue="255"/>
+                </spatialInfo>
+            </featureInstance>
+        </objectInstance>
+        <objectInstance name="A2" id="ActivityAgentInstance_6" objectClassID="ActivityAgentClass_1">
+            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_18"/>
+            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_19"/>
+            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_20"/>
+            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_21"/>
+            <featureInstance
+                featureObjectClassID="SpatialInfoObjectFeatureClass_2"
+                xsi:type="XMLSpatialInfoFeatureInstance" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <spatialInfo speed="10.0" direction="0.0"
+                    drawPriority="3.0" imageStyle="2" shapeStyle="1"
+                    x="20.0" y="180.0">
+                    <figure direction="0.0" radius="5.0" xsi:type="XMLCircle">
+                        <balancePoint x="5.0" y="5.0"/>
+                        <position x="20.0" y="180.0"/>
+                    </figure>
+                    <shapeColor red="0" green="153" blue="153"/>
+                </spatialInfo>
+            </featureInstance>
+        </objectInstance>
+        <objectInstance name="A3" id="ActivityAgentInstance_7" objectClassID="ActivityAgentClass_1">
+            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_18"/>
+            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_19"/>
+            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_20"/>
+            <bodyVariableInstance bodyVariableClassID="BodyVariableClass_21"/>
+            <featureInstance
+                featureObjectClassID="SpatialInfoObjectFeatureClass_2"
+                xsi:type="XMLSpatialInfoFeatureInstance" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <spatialInfo speed="10.0" direction="0.0"
+                    drawPriority="3.0" imageStyle="2" shapeStyle="1"
+                    x="180.0" y="180.0">
+                    <figure direction="0.0" radius="5.0" xsi:type="XMLCircle">
+                        <balancePoint x="5.0" y="5.0"/>
+                        <position x="180.0" y="180.0"/>
+                    </figure>
+                    <shapeColor red="255" green="0" blue="0"/>
+                </spatialInfo>
+            </featureInstance>
+        </objectInstance>
+    </situation>
     <analysis name="Miner Population" id="Analysis_0" xAxisName=""
         yAxisName="" deltaTicks="1" default="false" type="Series" windowSize="100">
         <item name="NMiners" colorRed="214" colorGreen="210" colorBlue="162">
@@ -2109,10 +2378,10 @@
                         <functionCall>
                             <call functionName="GetVariableFrom">
                                 <variableID writeable="false" id="BodyVariableClass_2"/>
-                                <parameterID id="FunctionArgument_22"/>
+                                <parameterID id="FunctionArgument_28"/>
                             </call>
                         </functionCall>
-                        <parameter name="moon" id="FunctionArgument_22">
+                        <parameter name="moon" id="FunctionArgument_28">
                             <simObjectType/>
                         </parameter>
                     </parametricFunction>
@@ -2129,14 +2398,14 @@
                 <parametricFunction>
                     <functionCall>
                         <call functionName="Max">
-                            <parameterID id="FunctionArgument_23"/>
-                            <parameterID id="FunctionArgument_24"/>
+                            <parameterID id="FunctionArgument_29"/>
+                            <parameterID id="FunctionArgument_30"/>
                         </call>
                     </functionCall>
-                    <parameter name="a1" id="FunctionArgument_23">
+                    <parameter name="a1" id="FunctionArgument_29">
                         <doubleType/>
                     </parameter>
-                    <parameter name="a2" id="FunctionArgument_24">
+                    <parameter name="a2" id="FunctionArgument_30">
                         <doubleType/>
                     </parameter>
                 </parametricFunction>
@@ -2145,10 +2414,10 @@
                         <functionCall>
                             <call functionName="GetVariableFrom">
                                 <variableID writeable="false" id="BodyVariableClass_2"/>
-                                <parameterID id="FunctionArgument_25"/>
+                                <parameterID id="FunctionArgument_31"/>
                             </call>
                         </functionCall>
-                        <parameter name="moon" id="FunctionArgument_25">
+                        <parameter name="moon" id="FunctionArgument_31">
                             <simObjectType/>
                         </parameter>
                     </parametricFunction>
@@ -2161,8 +2430,32 @@
             </call>
         </item>
     </analysis>
+    <analysis name="Moon coverage" id="Analysis_2" xAxisName=""
+        yAxisName="" deltaTicks="1" default="false" type="Series" windowSize="500">
+        <item name="Moons Alliance 1" colorRed="0" colorGreen="0" colorBlue="255">
+            <call userFunctionID="UserFunction_8"/>
+            <doubleType/>
+        </item>
+        <item name="Moons Alliance 2" colorRed="0" colorGreen="204" colorBlue="204">
+            <call userFunctionID="UserFunction_11">
+                <string value="A2"/>
+            </call>
+            <doubleType/>
+        </item>
+        <item name="Moons Alliance 3" colorRed="255" colorGreen="0" colorBlue="51">
+            <call userFunctionID="UserFunction_11">
+                <string value="A3"/>
+            </call>
+            <doubleType/>
+        </item>
+    </analysis>
     <simulation id="Simulation_0" startSituationID="Situation_1" test="false">
         <analysis id="Analysis_0"/>
         <analysis id="Analysis_1"/>
+    </simulation>
+    <simulation id="Simulation_1" startSituationID="Situation_2" test="false">
+        <analysis id="Analysis_0"/>
+        <analysis id="Analysis_1"/>
+        <analysis id="Analysis_2"/>
     </simulation>
 </XMLSeSAmModel>
